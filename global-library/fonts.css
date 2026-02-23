@@ -1,133 +1,630 @@
-@charset "UTF-8";
-/* ШРИФТОВА БІБЛІОТЕКА (В алфавітному порядку)
-   Підключаються тільки ті файли, які реально використані в проекті.
-*/
+
 @font-face {
-  font-family: "Bebas Neue";
-  src: url("~@fonts/bebasneuethin.woff2") format("woff2"), url("~@fonts/bebasneuethin.woff") format("woff"), url("~@fonts/bebasneuethin.ttf") format("truetype");
-  font-weight: 100;
+  font-family: 'bebasneuebold';
+  src: url('./assets/fonts/bebasneuebold.ttf') format('ttf');
+  font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
+
 @font-face {
-  font-family: "Bebas Neue";
-  src: url("~@fonts/bebasneuelight.woff2") format("woff2"), url("~@fonts/bebasneuelight.woff") format("woff"), url("~@fonts/bebasneuelight.ttf") format("truetype");
-  font-weight: 300;
+  font-family: 'bebasneuebold';
+  src: url('./assets/fonts/bebasneuebold.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
+
 @font-face {
-  font-family: "Bebas Neue";
-  src: url("~@fonts/bebasneuebook.woff2") format("woff2"), url("~@fonts/bebasneuebook.woff") format("woff"), url("~@fonts/bebasneuebook.ttf") format("truetype");
-  font-weight: 350;
+  font-family: 'bebasneuebold';
+  src: url('./assets/fonts/bebasneuebold.woff2') format('woff2');
+  font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
+
 @font-face {
-  font-family: "Bebas Neue";
-  src: url("~@fonts/bebasneueregular.woff2") format("woff2"), url("~@fonts/bebasneueregular.woff") format("woff"), url("~@fonts/bebasneueregular.ttf") format("truetype");
-  font-weight: 400;
+  font-family: 'bebasneuebook';
+  src: url('./assets/fonts/bebasneuebook.ttf') format('ttf');
+  font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
+
 @font-face {
-  font-family: "Bebas Neue";
-  src: url("~@fonts/bebasneuebold.woff2") format("woff2"), url("~@fonts/bebasneuebold.woff") format("woff"), url("~@fonts/bebasneuebold.ttf") format("truetype");
-  font-weight: 700;
+  font-family: 'bebasneuebook';
+  src: url('./assets/fonts/bebasneuebook.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
+
 @font-face {
-  font-family: Cramaten;
-  src: url("~@fonts/cramaten.ttf") format("truetype");
-  font-weight: 400;
+  font-family: 'bebasneuebook';
+  src: url('./assets/fonts/bebasneuebook.woff2') format('woff2');
+  font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
+
 @font-face {
-  font-family: "Cyrillic Custom";
-  src: url("~@fonts/cyrillic400.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Latin Custom";
-  src: url("~@fonts/latin400.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: HalloWitch;
-  src: url("~@fonts/HalloWitch.ttf") format("truetype");
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Helvetica Neue Cyr";
-  src: url("~@fonts/HelveticaNeueCyr-Light.woff2") format("woff2"), url("~@fonts/HelveticaNeueCyr-Light.woff") format("woff"), url("~@fonts/HelveticaNeueCyr-Light.ttf") format("truetype");
-  font-weight: 300;
+  font-family: 'bebasneuelight';
+  src: url('./assets/fonts/bebasneuelight.ttf') format('ttf');
+  font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
+
 @font-face {
-  font-family: "Helvetica Neue Cyr";
-  src: url("~@fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"), url("~@fonts/HelveticaNeueCyr-Roman.woff") format("woff"), url("~@fonts/HelveticaNeueCyr-Roman.ttf") format("truetype");
-  font-weight: 400;
+  font-family: 'bebasneuelight';
+  src: url('./assets/fonts/bebasneuelight.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
+
 @font-face {
-  font-family: "LeagueGothic-Regular";
-  src: url("~@fonts/LeagueGothic-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-display: swap;
+  font-family: 'bebasneuelight';
+  src: url('./assets/fonts/bebasneuelight.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-  font-family: Manrope;
-  src: url("~@fonts/Manrope-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-display: swap;
+  font-family: 'bebasneueregular';
+  src: url('./assets/fonts/bebasneueregular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-  font-family: Manrope;
-  src: url("~@fonts/Manrope-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-display: swap;
+  font-family: 'bebasneueregular';
+  src: url('./assets/fonts/bebasneueregular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-  font-family: Montserrat, sans-serif;
-  src: url("~@fonts/Montserrat-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-display: swap;
+  font-family: 'bebasneueregular';
+  src: url('./assets/fonts/bebasneueregular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-  font-family: Montserrat, sans-serif;
-  src: url("~@fonts/Montserrat-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-display: swap;
+  font-family: 'bebasneuethin';
+  src: url('./assets/fonts/bebasneuethin.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-  font-family: "Songer Condensed";
-  src: url("~@fonts/SONGERCondensed.woff2") format("woff2"), url("~@fonts/SONGERCondensed.woff") format("woff");
-  font-weight: 400;
-  font-display: swap;
+  font-family: 'bebasneuethin';
+  src: url('./assets/fonts/bebasneuethin.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-  font-family: Steelfish;
-  src: url("~@fonts/SteelfishRg-Regular.woff2") format("woff2"), url("~@fonts/SteelfishRg-Regular.woff") format("woff"), url("~@fonts/SteelfishRg-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-display: swap;
+  font-family: 'bebasneuethin';
+  src: url('./assets/fonts/bebasneuethin.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-  font-family: Steelfish;
-  src: url("~@fonts/SteelfishRg-Bold.woff2") format("woff2"), url("~@fonts/SteelfishRg-Bold.woff") format("woff"), url("~@fonts/SteelfishRg-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-display: swap;
+  font-family: 'cramaten';
+  src: url('./assets/fonts/cramaten.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-  font-family: Steelfish;
-  src: url("~@fonts/SteelfishOutline-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-variant: outline;
-  font-display: swap;
+  font-family: 'cyr500';
+  src: url('./assets/fonts/cyr500.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cyr600';
+  src: url('./assets/fonts/cyr600.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cyr700';
+  src: url('./assets/fonts/cyr700.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cyrext500';
+  src: url('./assets/fonts/cyrext500.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cyrext600';
+  src: url('./assets/fonts/cyrext600.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cyrext700';
+  src: url('./assets/fonts/cyrext700.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cyrillic400';
+  src: url('./assets/fonts/cyrillic400.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cyrillicext400';
+  src: url('./assets/fonts/cyrillicext400.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DrukCyr-Bold';
+  src: url('./assets/fonts/DrukCyr-Bold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DrukCyr-Medium';
+  src: url('./assets/fonts/DrukCyr-Medium.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HalloWitch';
+  src: url('./assets/fonts/HalloWitch.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr-Light';
+  src: url('./assets/fonts/HelveticaNeueCyr-Light.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr-Light';
+  src: url('./assets/fonts/HelveticaNeueCyr-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr-Light';
+  src: url('./assets/fonts/HelveticaNeueCyr-Light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr-Roman';
+  src: url('./assets/fonts/HelveticaNeueCyr-Roman.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr-Roman';
+  src: url('./assets/fonts/HelveticaNeueCyr-Roman.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr-Roman';
+  src: url('./assets/fonts/HelveticaNeueCyr-Roman.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'latin-ext700';
+  src: url('./assets/fonts/latin-ext700.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'latin400';
+  src: url('./assets/fonts/latin400.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'latin500';
+  src: url('./assets/fonts/latin500.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'latin600';
+  src: url('./assets/fonts/latin600.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'latin700';
+  src: url('./assets/fonts/latin700.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'latinext400';
+  src: url('./assets/fonts/latinext400.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'latinext500';
+  src: url('./assets/fonts/latinext500.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'latinext600';
+  src: url('./assets/fonts/latinext600.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LeagueGothic-Regular';
+  src: url('./assets/fonts/LeagueGothic-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LeagueGothic_Condensed-Regular';
+  src: url('./assets/fonts/LeagueGothic_Condensed-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LeagueGothic_SemiCondensed-Regular';
+  src: url('./assets/fonts/LeagueGothic_SemiCondensed-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope-Bold';
+  src: url('./assets/fonts/Manrope-Bold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope-ExtraBold';
+  src: url('./assets/fonts/Manrope-ExtraBold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope-ExtraLight';
+  src: url('./assets/fonts/Manrope-ExtraLight.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope-Light';
+  src: url('./assets/fonts/Manrope-Light.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope-Medium';
+  src: url('./assets/fonts/Manrope-Medium.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope-Regular';
+  src: url('./assets/fonts/Manrope-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope-SemiBold';
+  src: url('./assets/fonts/Manrope-SemiBold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('./assets/fonts/Montserrat-Bold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Italic';
+  src: url('./assets/fonts/Montserrat-Italic.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('./assets/fonts/Montserrat-Light.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('./assets/fonts/Montserrat-Medium.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('./assets/fonts/Montserrat-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SONGERCondensed';
+  src: url('./assets/fonts/SONGERCondensed.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SONGERCondensed';
+  src: url('./assets/fonts/SONGERCondensed.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishBk-Italic';
+  src: url('./assets/fonts/SteelfishBk-Italic.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishBk-Regular';
+  src: url('./assets/fonts/SteelfishBk-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishEb-Italic';
+  src: url('./assets/fonts/SteelfishEb-Italic.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishEb-Italic';
+  src: url('./assets/fonts/SteelfishEb-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishEb-Italic';
+  src: url('./assets/fonts/SteelfishEb-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishEb-Regular';
+  src: url('./assets/fonts/SteelfishEb-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishEb-Regular';
+  src: url('./assets/fonts/SteelfishEb-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishEb-Regular';
+  src: url('./assets/fonts/SteelfishEb-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishEl-Italic';
+  src: url('./assets/fonts/SteelfishEl-Italic.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishEl-Regular';
+  src: url('./assets/fonts/SteelfishEl-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishLt-Italic';
+  src: url('./assets/fonts/SteelfishLt-Italic.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishLt-Regular';
+  src: url('./assets/fonts/SteelfishLt-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishOutline-Regular';
+  src: url('./assets/fonts/SteelfishOutline-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishRg-Bold';
+  src: url('./assets/fonts/SteelfishRg-Bold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishRg-Bold';
+  src: url('./assets/fonts/SteelfishRg-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishRg-Bold';
+  src: url('./assets/fonts/SteelfishRg-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishRg-BoldItalic';
+  src: url('./assets/fonts/SteelfishRg-BoldItalic.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishRg-BoldItalic';
+  src: url('./assets/fonts/SteelfishRg-BoldItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishRg-BoldItalic';
+  src: url('./assets/fonts/SteelfishRg-BoldItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishRg-Italic';
+  src: url('./assets/fonts/SteelfishRg-Italic.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishRg-Italic';
+  src: url('./assets/fonts/SteelfishRg-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishRg-Italic';
+  src: url('./assets/fonts/SteelfishRg-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishRg-Regular';
+  src: url('./assets/fonts/SteelfishRg-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishRg-Regular';
+  src: url('./assets/fonts/SteelfishRg-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishRg-Regular';
+  src: url('./assets/fonts/SteelfishRg-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishUl-Italic';
+  src: url('./assets/fonts/SteelfishUl-Italic.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SteelfishUl-Regular';
+  src: url('./assets/fonts/SteelfishUl-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'steelfish_bd';
+  src: url('./assets/fonts/steelfish_bd.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Unbounded-Bold';
+  src: url('./assets/fonts/Unbounded-Bold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Unbounded-Light';
+  src: url('./assets/fonts/Unbounded-Light.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Unbounded-Medium';
+  src: url('./assets/fonts/Unbounded-Medium.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Unbounded-Regular';
+  src: url('./assets/fonts/Unbounded-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
 }
