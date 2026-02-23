@@ -65,6 +65,7 @@
     height: 35px;
   }
 }</style>
+
   <div class="component-header">
     <h2>start_date_badge_1</h2>
     <div class="component-controls">
@@ -72,12 +73,14 @@
       <button class="btn-del" onclick="deleteFullComponent('start_date_badge_1')">🗑 Delete</button>
     </div>
   </div>
+
   <div class="tabs-nav">
     <button class="tab-link active" onclick="openTab(event, 'start_date_badge_1', 'preview')">Preview</button>
     <button class="tab-link" onclick="openTab(event, 'start_date_badge_1', 'html')">HTML</button>
     <button class="tab-link" onclick="openTab(event, 'start_date_badge_1', 'scss')">SCSS</button>
     <button class="tab-link" onclick="openTab(event, 'start_date_badge_1', 'js')">JS</button>
   </div>
+
   <div class="tabs-content">
     <div id="tab-start_date_badge_1-preview" class="tab-panel active">
       <div class="component-body"><a href="" class="start_date_badge_1" data-component>
@@ -90,6 +93,7 @@
     </div>
 </a></div>
     </div>
+
     <div id="tab-start_date_badge_1-html" class="tab-panel">
       <pre><code>&lt;a href="" class="start_date_badge_1" data-component&gt;
     &lt;p class="start_date_badge_1-left"&gt;
@@ -101,6 +105,7 @@
     &lt;/div&gt;
 &lt;/a&gt;</code></pre>
     </div>
+
     <div id="tab-start_date_badge_1-scss" class="tab-panel"><pre><code>.start_date_badge_1 {
   display: flex;
   align-items: center;
@@ -203,16 +208,15 @@
 
 });</code></pre></div>
   </div>
+
   <script>
-(function(){
-  try {
-    const root = document.currentScript.closest('#card-start_date_badge_1');
-    if (!root) return;
+  (function(){
+    try {
+      const root = document.currentScript.closest('#card-start_date_badge_1');
+      if (!root) return;
 
-    (function(root){
-      document.addEventListener("DOMContentLoaded", () => {
-
-    const dateBlock = document.querySelector('.badge_1_date-block');
+      (function(root){
+        const dateBlock = root.querySelector('.badge_1_date-block');
 
     const months = [
         'January','February','March','April','May','June',
@@ -228,14 +232,12 @@
 
         dateBlock.textContent = `${day} ${month}`;
     }
+      })(root);
 
-});
-    })(root);
-
-  } catch(e) {
-    console.error(e);
-  }
-})();
-</script>
+    } catch(e) {
+      console.error(e);
+    }
+  })();
+  </script>
 
 </section>
