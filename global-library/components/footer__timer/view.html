@@ -86,6 +86,7 @@
   transform: translateY(0px);
   opacity: 1;
 }</style>
+
   <div class="component-header">
     <h2>footer__timer</h2>
     <div class="component-controls">
@@ -93,12 +94,14 @@
       <button class="btn-del" onclick="deleteFullComponent('footer__timer')">🗑 Delete</button>
     </div>
   </div>
+
   <div class="tabs-nav">
     <button class="tab-link active" onclick="openTab(event, 'footer__timer', 'preview')">Preview</button>
     <button class="tab-link" onclick="openTab(event, 'footer__timer', 'html')">HTML</button>
     <button class="tab-link" onclick="openTab(event, 'footer__timer', 'scss')">SCSS</button>
     <button class="tab-link" onclick="openTab(event, 'footer__timer', 'js')">JS</button>
   </div>
+
   <div class="tabs-content">
     <div id="tab-footer__timer-preview" class="tab-panel active">
       <div class="component-body"><footer class="footer" id="footer" data-component>
@@ -124,6 +127,7 @@
         </div>
     </footer></div>
     </div>
+
     <div id="tab-footer__timer-html" class="tab-panel">
       <pre><code>&lt;footer class="footer" id="footer" data-component&gt;
         &lt;div class="footer-bg"&gt;
@@ -148,6 +152,7 @@
         &lt;/div&gt;
     &lt;/footer&gt;</code></pre>
     </div>
+
     <div id="tab-footer__timer-scss" class="tab-panel"><pre><code>
 .footer {
     position: fixed;
@@ -265,15 +270,16 @@
 
 export default footer__timer;</code></pre></div>
   </div>
-  <script>
-(function(){
-  try {
-    const root = document.currentScript.closest('#card-footer__timer');
-    if (!root) return;
 
-    (function(root){
-      const footer__timer = () => {
-    const footer = document.getElementById('footer');
+  <script>
+  (function(){
+    try {
+      const root = document.currentScript.closest('#card-footer__timer');
+      if (!root) return;
+
+      (function(root){
+        const footer__timer = () => {
+    const footer = root.querySelector('footer');
     if (!footer) return;
 
     const handleScroll = () => {
@@ -291,13 +297,13 @@ export default footer__timer;</code></pre></div>
     handleScroll(); 
 };
 
-export default footer__timer;
-    })(root);
+footer__timer;
+      })(root);
 
-  } catch(e) {
-    console.error(e);
-  }
-})();
-</script>
+    } catch(e) {
+      console.error(e);
+    }
+  })();
+  </script>
 
 </section>
