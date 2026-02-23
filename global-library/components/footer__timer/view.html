@@ -1,0 +1,318 @@
+<section class="component-card" data-name="footer__timer">
+  <style>.footer {
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  opacity: 0;
+  transform: translateY(150px);
+  width: 100%;
+  transition: all 0.5s ease;
+}
+.footer .footer-bg {
+  background-image: url(./assets/images/footer.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 12px 0;
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+}
+.footer-timer {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 10px;
+}
+.footer-timer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.footer-timer-value {
+  border-radius: 150px;
+  width: 67px;
+  height: 38px;
+  background-color: #fff;
+  color: #000;
+  font-family: "League Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 117%;
+  text-align: center;
+}
+.footer-timer-time {
+  font-weight: 500;
+  font-size: 10px;
+  font-family: Montserrat, sans-serif;
+  line-height: 100%;
+  text-align: center;
+  color: #fff;
+}
+.footer .footerButton {
+  border-radius: 130px;
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+  height: 65px;
+  background: linear-gradient(90deg, #982f01 0%, #fe4e01 50.48%, #982f01 100%);
+}
+.footer .footerButton p {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 132%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+.footer .footerButton span {
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 290%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+
+.footer.active {
+  transform: translateY(0px);
+  opacity: 1;
+}</style>
+
+  <div class="component-header">
+    <h2>footer__timer</h2>
+    <div>
+      <button onclick="addToProject('footer__timer')">➕</button>
+      <button onclick="deleteFullComponent('footer__timer')">🗑</button>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <button onclick="openTab(event,'footer__timer','preview')">Preview</button>
+    <button onclick="openTab(event,'footer__timer','html')">HTML</button>
+    <button onclick="openTab(event,'footer__timer','scss')">SCSS</button>
+    <button onclick="openTab(event,'footer__timer','js')">JS</button>
+  </div>
+
+  <div class="tab-content">
+    <div id="footer__timer-preview" class="active">
+      <div class="component-root" data-root="footer__timer">
+        <footer class="footer" id="footer" data-component>
+        <div class="footer-bg">
+            <div class="footer-timer">
+                <div class="footer-timer-item">
+                    <h3 class="footer-timer-value">23</h3>
+                    <p class="footer-timer-time">hours</p>
+                </div>
+                <div class="footer-timer-item">
+                    <h3 class="footer-timer-value">58</h3>
+                    <p class="footer-timer-time">minutes</p>
+                </div>
+                <div class="footer-timer-item">
+                    <h3 class="footer-timer-value">33</h3>
+                    <p class="footer-timer-time">seconds</p>
+                </div>
+            </div>
+            <a href="https://zubalenok.kwiga.com/o/v43QfyBksQ5n/payment" class="footerButton">
+                <p>Yes, - 80% OFF NOW</p>
+                <span>Originally 119€ - now for less than 0,6€/day</span>
+            </a>
+        </div>
+    </footer>
+      </div>
+    </div>
+
+    <div id="footer__timer-html">
+      <pre><code>&lt;footer class="footer" id="footer" data-component&gt;
+        &lt;div class="footer-bg"&gt;
+            &lt;div class="footer-timer"&gt;
+                &lt;div class="footer-timer-item"&gt;
+                    &lt;h3 class="footer-timer-value"&gt;23&lt;/h3&gt;
+                    &lt;p class="footer-timer-time"&gt;hours&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="footer-timer-item"&gt;
+                    &lt;h3 class="footer-timer-value"&gt;58&lt;/h3&gt;
+                    &lt;p class="footer-timer-time"&gt;minutes&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="footer-timer-item"&gt;
+                    &lt;h3 class="footer-timer-value"&gt;33&lt;/h3&gt;
+                    &lt;p class="footer-timer-time"&gt;seconds&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;a href="https://zubalenok.kwiga.com/o/v43QfyBksQ5n/payment" class="footerButton"&gt;
+                &lt;p&gt;Yes, - 80% OFF NOW&lt;/p&gt;
+                &lt;span&gt;Originally 119€ - now for less than 0,6€/day&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;</code></pre>
+    </div>
+
+    <div id="footer__timer-scss"><pre><code>
+.footer {
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    opacity: 0;
+    transform: translateY(150px);
+    width: 100%;
+    transition: all .5s ease;
+
+    .footer-bg {
+        background-image: url(../assets/images/footer.webp);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 12px 0;
+        max-width: 440px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &amp;-timer {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        padding-bottom: 10px;
+
+        &amp;-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        &amp;-value {
+            border-radius: 150px;
+            width: 67px;
+            height: 38px;
+            background-color: #fff;
+            color: #000;
+            font-family: "League Gothic", sans-serif;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 117%;
+            text-align: center;
+        }
+
+        &amp;-time {
+            font-weight: 500;
+            font-size: 10px;
+            font-family: Montserrat, sans-serif;
+            line-height: 100%;
+            text-align: center;
+            color: #fff;
+        }
+    }
+
+    .footerButton {
+        border-radius: 130px;
+        max-width: 320px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: 'Roboto', sans-serif;
+        margin: 0 auto;
+        height: 65px;
+        background: linear-gradient(90deg, #982f01 0%, #fe4e01 50.48%, #982f01 100%);
+    
+        p {
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 132%;
+            text-transform: uppercase;
+            text-align: center;
+            color: #fff;
+        }
+
+        span {
+            font-weight: 700;
+            font-size: 10px;
+            line-height: 290%;
+            text-transform: uppercase;
+            text-align: center;
+            color: #fff;
+        }
+    }
+}
+
+.footer.active {
+    transform: translateY(0px);
+    opacity: 1;
+}</code></pre></div>
+    <div id="footer__timer-js"><pre><code>const footer__timer = () =&gt; {
+    const footer = document.getElementById('footer');
+    if (!footer) return;
+
+    const handleScroll = () =&gt; {
+        if (window.scrollY &gt;= 200) {
+            footer.classList.add('active');
+        } else {
+            footer.classList.remove('active');
+        }
+    };
+
+    // Додаємо слухач подій
+    window.addEventListener('scroll', handleScroll);
+    
+    // Викликаємо один раз відразу, щоб перевірити стан при завантаженні
+    handleScroll(); 
+};
+
+export default footer__timer;</code></pre></div>
+  </div>
+
+  
+<script>
+window.ComponentSystem = window.ComponentSystem || {
+  registry: {},
+  register(name, fn) {
+    this.registry[name] = fn;
+  },
+  init(root, name) {
+    if (this.registry[name]) {
+      try {
+        this.registry[name](root);
+      } catch (e) {
+        console.error("Component error:", name, e);
+      }
+    }
+  }
+};
+
+window.ComponentSystem.register("footer__timer", function(root) {
+  const footer__timer = () => {
+    const footer = document.getElementById('footer');
+    if (!footer) return;
+
+    const handleScroll = () => {
+        if (window.scrollY >= 200) {
+            footer.classList.add('active');
+        } else {
+            footer.classList.remove('active');
+        }
+    };
+
+    // Додаємо слухач подій
+    window.addEventListener('scroll', handleScroll);
+    
+    // Викликаємо один раз відразу, щоб перевірити стан при завантаженні
+    handleScroll(); 
+};
+
+export default footer__timer;
+});
+</script>
+
+</section>
