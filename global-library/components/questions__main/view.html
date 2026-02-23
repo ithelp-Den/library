@@ -363,8 +363,10 @@ const questions__main = () => {
 }
 
 questions__main;
-})(document.currentScript.closest('#card-questions__main'));
+
 if(typeof questions__main === 'function'){ questions__main(); }
+
+})(document.currentScript.closest('#card-questions__main'));
   } catch(e) {
     console.error(e);
   }
