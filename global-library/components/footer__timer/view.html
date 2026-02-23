@@ -86,7 +86,6 @@
   transform: translateY(0px);
   opacity: 1;
 }</style>
-
   <div class="component-header">
     <h2>footer__timer</h2>
     <div class="component-controls">
@@ -94,14 +93,12 @@
       <button class="btn-del" onclick="deleteFullComponent('footer__timer')">🗑 Delete</button>
     </div>
   </div>
-
   <div class="tabs-nav">
     <button class="tab-link active" onclick="openTab(event, 'footer__timer', 'preview')">Preview</button>
     <button class="tab-link" onclick="openTab(event, 'footer__timer', 'html')">HTML</button>
     <button class="tab-link" onclick="openTab(event, 'footer__timer', 'scss')">SCSS</button>
     <button class="tab-link" onclick="openTab(event, 'footer__timer', 'js')">JS</button>
   </div>
-
   <div class="tabs-content">
     <div id="tab-footer__timer-preview" class="tab-panel active">
       <div class="component-body"><footer class="footer" id="footer" data-component>
@@ -127,7 +124,6 @@
         </div>
     </footer></div>
     </div>
-
     <div id="tab-footer__timer-html" class="tab-panel">
       <pre><code>&lt;footer class="footer" id="footer" data-component&gt;
         &lt;div class="footer-bg"&gt;
@@ -152,7 +148,6 @@
         &lt;/div&gt;
     &lt;/footer&gt;</code></pre>
     </div>
-
     <div id="tab-footer__timer-scss" class="tab-panel"><pre><code>
 .footer {
     position: fixed;
@@ -250,60 +245,71 @@
     opacity: 1;
 }</code></pre></div>
     <div id="tab-footer__timer-js" class="tab-panel"><pre><code>const footer__timer = () =&gt; {
-    const footer = document.getElementById('footer');
-    if (!footer) return;
+    const init = () =&gt; {
+        const footer = document.getElementById('footer');
+        if (!footer) return;
 
-    const handleScroll = () =&gt; {
-        if (window.scrollY &gt;= 200) {
-            footer.classList.add('active');
-        } else {
-            footer.classList.remove('active');
-        }
+        // ===== Scroll handler =====
+        const handleScroll = () =&gt; {
+            if (window.scrollY &gt;= 200) footer.classList.add('active');
+            else footer.classList.remove('active');
+        };
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+
+        // ===== Timer setup =====
+        const hoursEl = footer.querySelector('.footer-timer-item:nth-child(1) .footer-timer-value');
+        const minutesEl = footer.querySelector('.footer-timer-item:nth-child(2) .footer-timer-value');
+        const secondsEl = footer.querySelector('.footer-timer-item:nth-child(3) .footer-timer-value');
+
+        if (!hoursEl || !minutesEl || !secondsEl) return;
+
+        const STORAGE_KEY = 'footer_timer_end';
+        const FULL_DURATION = 24 * 60 * 60 * 1000; // 24 години в мс
+
+        const startTimer = () =&gt; {
+            // Перевіряємо збережений час
+            let endTime = parseInt(localStorage.getItem(STORAGE_KEY), 10);
+            if (isNaN(endTime) || endTime &lt; Date.now()) {
+                endTime = Date.now() + FULL_DURATION;
+                localStorage.setItem(STORAGE_KEY, endTime);
+            }
+
+            const update = () =&gt; {
+                let remaining = Math.max(0, endTime - Date.now());
+                if (remaining &lt;= 0) {
+                    // Таймер закінчився → перезапускаємо
+                    endTime = Date.now() + FULL_DURATION;
+                    localStorage.setItem(STORAGE_KEY, endTime);
+                    remaining = FULL_DURATION;
+                }
+
+                const hrs = Math.floor(remaining / (1000 * 60 * 60));
+                const mins = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+                const secs = Math.floor((remaining % (1000 * 60)) / 1000);
+
+                hoursEl.textContent = String(hrs).padStart(2, '0');
+                minutesEl.textContent = String(mins).padStart(2, '0');
+                secondsEl.textContent = String(secs).padStart(2, '0');
+
+                requestAnimationFrame(update); // плавний, без стрибків
+            };
+
+            update();
+        };
+
+        startTimer();
     };
 
-    // Додаємо слухач подій
-    window.addEventListener('scroll', handleScroll);
-    
-    // Викликаємо один раз відразу, щоб перевірити стан при завантаженні
-    handleScroll(); 
-};
-
-export default footer__timer;</code></pre></div>
-  </div>
-
-  <script>
-  (function(){
-    try {
-      const root = document.currentScript.closest('#card-footer__timer');
-      if (!root) return;
-
-      (function(root){
-        const footer__timer = () => {
-    const footer = root.querySelector('footer');
-    if (!footer) return;
-
-    const handleScroll = () => {
-        if (window.scrollY >= 200) {
-            footer.classList.add('active');
-        } else {
-            footer.classList.remove('active');
-        }
-    };
-
-    // Додаємо слухач подій
-    window.addEventListener('scroll', handleScroll);
-    
-    // Викликаємо один раз відразу, щоб перевірити стан при завантаженні
-    handleScroll(); 
-};
-
-footer__timer;
-      })(root);
-
-    } catch(e) {
-      console.error(e);
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
     }
-  })();
-  </script>
+};
 
+export default footer__timer;
+</code></pre></div>
+  </div>
+  <img src="x" onerror="(function(){ try{ const footer__timer = () => {     const init = () => {         const footer = document.getElementById('footer');         if (!footer) return;          // ===== Scroll handler =====         const handleScroll = () => {             if (window.scrollY >= 200) footer.classList.add('active');             else footer.classList.remove('active');         };         window.addEventListener('scroll', handleScroll);         handleScroll();          // ===== Timer setup =====         const hoursEl = footer.querySelector('.footer-timer-item:nth-child(1) .footer-timer-value');         const minutesEl = footer.querySelector('.footer-timer-item:nth-child(2) .footer-timer-value');         const secondsEl = footer.querySelector('.footer-timer-item:nth-child(3) .footer-timer-value');          if (!hoursEl || !minutesEl || !secondsEl) return;          const STORAGE_KEY = 'footer_timer_end';         const FULL_DURATION = 24 * 60 * 60 * 1000; // 24 години в мс          const startTimer = () => {             // Перевіряємо збережений час             let endTime = parseInt(localStorage.getItem(STORAGE_KEY), 10);             if (isNaN(endTime) || endTime < Date.now()) {                 endTime = Date.now() + FULL_DURATION;                 localStorage.setItem(STORAGE_KEY, endTime);             }              const update = () => {                 let remaining = Math.max(0, endTime - Date.now());                 if (remaining <= 0) {                     // Таймер закінчився → перезапускаємо                     endTime = Date.now() + FULL_DURATION;                     localStorage.setItem(STORAGE_KEY, endTime);                     remaining = FULL_DURATION;                 }                  const hrs = Math.floor(remaining / (1000 * 60 * 60));                 const mins = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));                 const secs = Math.floor((remaining % (1000 * 60)) / 1000);                  hoursEl.textContent = String(hrs).padStart(2, '0');                 minutesEl.textContent = String(mins).padStart(2, '0');                 secondsEl.textContent = String(secs).padStart(2, '0');                  requestAnimationFrame(update); // плавний, без стрибків             };              update();         };          startTimer();     };      if (document.readyState === 'loading') {         document.addEventListener('DOMContentLoaded', init);     } else {         init();     } };  export default footer__timer; }catch(e){console.error(e)}})();this.remove();" style="display:none;">
 </section>
