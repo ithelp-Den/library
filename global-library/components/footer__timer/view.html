@@ -1,4 +1,4 @@
-<section class="component-card" data-name="footer__timer">
+<section class="component-card" id="card-footer__timer" data-name="footer__timer">
   <style>.footer {
   position: fixed;
   z-index: 99;
@@ -86,26 +86,22 @@
   transform: translateY(0px);
   opacity: 1;
 }</style>
-
   <div class="component-header">
     <h2>footer__timer</h2>
-    <div>
-      <button onclick="addToProject('footer__timer')">➕</button>
-      <button onclick="deleteFullComponent('footer__timer')">🗑</button>
+    <div class="component-controls">
+      <button class="btn-add" onclick="addToProject('footer__timer')">➕ Add</button>
+      <button class="btn-del" onclick="deleteFullComponent('footer__timer')">🗑 Delete</button>
     </div>
   </div>
-
-  <div class="tabs">
-    <button onclick="openTab(event,'footer__timer','preview')">Preview</button>
-    <button onclick="openTab(event,'footer__timer','html')">HTML</button>
-    <button onclick="openTab(event,'footer__timer','scss')">SCSS</button>
-    <button onclick="openTab(event,'footer__timer','js')">JS</button>
+  <div class="tabs-nav">
+    <button class="tab-link active" onclick="openTab(event, 'footer__timer', 'preview')">Preview</button>
+    <button class="tab-link" onclick="openTab(event, 'footer__timer', 'html')">HTML</button>
+    <button class="tab-link" onclick="openTab(event, 'footer__timer', 'scss')">SCSS</button>
+    <button class="tab-link" onclick="openTab(event, 'footer__timer', 'js')">JS</button>
   </div>
-
-  <div class="tab-content">
-    <div id="footer__timer-preview" class="active">
-      <div class="component-root" data-root="footer__timer">
-        <footer class="footer" id="footer" data-component>
+  <div class="tabs-content">
+    <div id="tab-footer__timer-preview" class="tab-panel active">
+      <div class="component-body"><footer class="footer" id="footer" data-component>
         <div class="footer-bg">
             <div class="footer-timer">
                 <div class="footer-timer-item">
@@ -126,11 +122,9 @@
                 <span>Originally 119€ - now for less than 0,6€/day</span>
             </a>
         </div>
-    </footer>
-      </div>
+    </footer></div>
     </div>
-
-    <div id="footer__timer-html">
+    <div id="tab-footer__timer-html" class="tab-panel">
       <pre><code>&lt;footer class="footer" id="footer" data-component&gt;
         &lt;div class="footer-bg"&gt;
             &lt;div class="footer-timer"&gt;
@@ -154,8 +148,7 @@
         &lt;/div&gt;
     &lt;/footer&gt;</code></pre>
     </div>
-
-    <div id="footer__timer-scss"><pre><code>
+    <div id="tab-footer__timer-scss" class="tab-panel"><pre><code>
 .footer {
     position: fixed;
     z-index: 99;
@@ -251,7 +244,7 @@
     transform: translateY(0px);
     opacity: 1;
 }</code></pre></div>
-    <div id="footer__timer-js"><pre><code>const footer__timer = () =&gt; {
+    <div id="tab-footer__timer-js" class="tab-panel"><pre><code>const footer__timer = () =&gt; {
     const footer = document.getElementById('footer');
     if (!footer) return;
 
@@ -272,27 +265,14 @@
 
 export default footer__timer;</code></pre></div>
   </div>
+  <script>
+(function(){
+  try {
+    const root = document.currentScript.closest('#card-footer__timer');
+    if (!root) return;
 
-  
-<script>
-window.ComponentSystem = window.ComponentSystem || {
-  registry: {},
-  register(name, fn) {
-    this.registry[name] = fn;
-  },
-  init(root, name) {
-    if (this.registry[name]) {
-      try {
-        this.registry[name](root);
-      } catch (e) {
-        console.error("Component error:", name, e);
-      }
-    }
-  }
-};
-
-window.ComponentSystem.register("footer__timer", function(root) {
-  const footer__timer = () => {
+    (function(root){
+      const footer__timer = () => {
     const footer = document.getElementById('footer');
     if (!footer) return;
 
@@ -312,7 +292,12 @@ window.ComponentSystem.register("footer__timer", function(root) {
 };
 
 export default footer__timer;
-});
+    })(root);
+
+  } catch(e) {
+    console.error(e);
+  }
+})();
 </script>
 
 </section>
