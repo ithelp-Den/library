@@ -329,13 +329,8 @@ export default questions__main;</code></pre></div>
   </div>
 
   <script>
-  (function(){
-    try {
-      const root = document.currentScript.closest('#card-questions__main');
-      if (!root) return;
-
-      (function(root){
-        (function(root){
+  try {
+    (function(root){
 const questions__main = () => {
   const items = root.querySelectorAll(".questionsContainer-item");
   
@@ -368,14 +363,12 @@ const questions__main = () => {
 }
 
 questions__main;
-})(document.currentScript.closest('#undefined'));
+})(document.currentScript.closest('#card-questions__main'));
 if(typeof questions__main === 'function'){ questions__main(); }
-      })(root);
-
-    } catch(e) {
-      console.error(e);
-    }
-  })();
+  } catch(e) {
+    console.error(e);
+  }
   </script>
+
 
 </section>
