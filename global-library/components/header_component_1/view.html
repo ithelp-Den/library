@@ -1,0 +1,867 @@
+<section class="component-card" id="card-header_component_1" data-name="header_component_1">
+  <style>@charset "UTF-8";
+.header {
+  min-height: 600px;
+  padding-top: 20px;
+  position: relative;
+}
+
+.header::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 112px 181px #9CB4CD;
+}
+
+.section-1-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+  max-width: 320px;
+  margin: 0 auto;
+  gap: 0px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.08);
+  background: linear-gradient(169deg, rgba(255, 255, 255, 0.885) 0%, rgba(255, 255, 255, 0.289) 100%);
+  border-radius: 20px;
+}
+
+.section-1-top-left {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  border-radius: 56px;
+  min-width: 185px;
+  height: 39px;
+  background: linear-gradient(90deg, #52acff 0%, #0084ff 50.48%, #52acff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-1-top-right {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 65%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+  min-width: 120px;
+  padding-right: 12px;
+  height: 39px;
+  gap: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-1-top-right img {
+  width: 18px;
+  height: 18px;
+}
+
+.header-title {
+  font-weight: 500;
+  font-size: 90px;
+  line-height: 89%;
+  letter-spacing: 0.04em;
+  font-family: "DrukCyr";
+  text-transform: uppercase;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: #000;
+}
+
+.header-subTitle {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 121%;
+  margin-top: -12px;
+  text-align: center;
+  font-family: "Bleeker";
+  color: #0084ff;
+}
+
+.karina {
+  width: 100%;
+  position: relative;
+  z-index: 5;
+  margin-top: -5%;
+}
+
+.header-button {
+  border-radius: 51px;
+  max-width: 297px;
+  width: 100%;
+  height: 76px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 406%;
+  text-transform: uppercase;
+  position: relative;
+  font-family: "Unbounded";
+  z-index: 9;
+  text-align: center;
+  color: #fff;
+  margin: -27% auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 0 10px;
+  gap: 10px;
+  box-shadow: inset 0 4px 41px 0 #c5e3ff;
+  background: linear-gradient(179deg, #0084ff 0%, #004f99 100%);
+}
+
+.header-button-discount {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  height: 65px;
+  width: 65px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 100%;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 158%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+
+.header-button-discount span {
+  font-size: 16px;
+  color: #0082ff;
+}
+
+.header-bootom-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  padding: 10px 0 20px 0;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+
+.header-price {
+  border: 3px solid rgba(0, 132, 255, 0.51);
+  background: rgba(255, 255, 255, 0.91);
+  border-radius: 16px;
+  padding: 16px;
+  width: 144px;
+  height: 69px;
+  position: absolute;
+  bottom: 24%;
+  right: 5%;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-price-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 50%;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  font-family: "Unbounded";
+  text-transform: uppercase;
+  text-align: center;
+  color: #0084ff;
+}
+
+.header-price-text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 80%;
+  text-align: center;
+  position: relative;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.header-price-text::after {
+  content: "";
+  display: block;
+  background-color: #eb0000;
+  width: 100px;
+  height: 2px;
+  position: absolute;
+  left: -5px;
+  top: 10px;
+}
+
+.header-programs {
+  background-image: url(./assets/images/plashka.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 38%;
+  left: 7%;
+  padding: 16px;
+  z-index: 3;
+  width: 103px;
+  height: 123px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-programs::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  z-index: -1;
+  background-color: #fff;
+  top: 51px;
+  left: 38px;
+  box-shadow: 0 0 23px 28px #fff;
+  border-radius: 100%;
+}
+
+.list-img {
+  width: 25px;
+  object-fit: contain;
+}
+
+.header-programs-value {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 40%;
+  padding: 20px 0 10px;
+  font-family: "Unbounded";
+  text-transform: uppercase;
+  text-align: center;
+  color: #0084ff;
+}
+
+.header-programs-title {
+  font-weight: 700;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  gap: 8px;
+  margin-bottom: -25px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.header-programs-title span {
+  font-weight: 700;
+  font-size: 10px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  border-radius: 200px;
+  background: linear-gradient(59deg, rgba(221, 236, 255, 0.768627451) 0%, rgba(198, 220, 239, 0.7411764706) 100%);
+  backdrop-filter: blur(2px);
+  width: 105px;
+  height: 28px;
+  text-align: center;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  padding: 20px 0;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 40%;
+  left: 0;
+}
+
+.marquee-content {
+  display: inline-flex;
+  gap: 7px;
+  will-change: transform;
+}
+
+.marquee-content img {
+  width: 300px; /* Налаштуй ширину під себе */
+  height: auto;
+  object-fit: cover;
+  filter: blur(0.5px);
+  flex-shrink: 0;
+}
+
+@media (max-width: 400px) {
+  .marquee-container {
+    bottom: 39%;
+  }
+  .marquee-content img {
+    width: 270px;
+  }
+  .header-programs-value {
+    font-size: 42px;
+  }
+  .header-programs {
+    padding: 14px;
+    width: 95px;
+    height: 111px;
+  }
+  .header-programs-value {
+    padding: 15px 0 10px;
+  }
+  .list-img {
+    width: 20px;
+    object-fit: contain;
+  }
+  .header-price-title {
+    font-size: 28px;
+  }
+  .header-price-text {
+    font-size: 18px;
+  }
+  .header-price-text::after {
+    width: 92px;
+    height: 2px;
+    position: absolute;
+    left: -8px;
+    top: 8px;
+  }
+  .header-price {
+    width: 125px;
+    height: 60px;
+  }
+}</style>
+  <div class="component-header">
+    <h2>header_component_1</h2>
+    <div class="component-controls">
+      <button class="btn-add" onclick="addToProject('header_component_1')">➕ Add</button>
+      <button class="btn-del" onclick="deleteFullComponent('header_component_1')">🗑 Delete</button>
+    </div>
+  </div>
+  <div class="tabs-nav">
+    <button class="tab-link active" onclick="openTab(event, 'header_component_1', 'preview')">Preview</button>
+    <button class="tab-link" onclick="openTab(event, 'header_component_1', 'html')">HTML</button>
+    <button class="tab-link" onclick="openTab(event, 'header_component_1', 'scss')">SCSS</button>
+    <button class="tab-link" onclick="openTab(event, 'header_component_1', 'js')">JS</button>
+  </div>
+  <div class="tabs-content">
+    <div id="tab-header_component_1-preview" class="tab-panel active">
+      <div class="component-body"><header class="header" data-component="main">
+    <div class="section-1-top open-popup-btn">
+        <p class="section-1-top-left">
+            ONLINE COURSES
+        </p>
+        <div class="section-1-top-right">
+            <img src="./assets/images/house.png" alt="">
+            <p>Train At Home</p>
+        </div>
+    </div>
+    <h1 class="header-title">
+        1 year
+        <br>
+        access to
+    </h1>
+    <h2 class="header-subTitle">
+        all programs
+    </h2>
+    <img src="./assets/images/karina.webp" class="karina" alt="">
+    <div class="header-programs">
+
+        <h2 class="header-programs-value">
+            10
+        </h2>
+        <h3 class="header-programs-title">
+            Programs
+            <br>
+            <span>+ All Courses Updates</span>
+        </h3>
+    </div>
+    <div class="header-price">
+        <h2 class="header-price-title">
+            199€
+        </h2>
+        <p class="header-price-text">
+            was 899€
+        </p>
+    </div>
+    <div class="marquee-container">
+        <div class="marquee-content" id="marquee">
+            <img src="./assets/images/slide-fon-1.webp" alt="1">
+            <img src="./assets/images/slide-fon-2.webp" alt="2">
+            <img src="./assets/images/slide-fon-3.webp" alt="3">
+        </div>
+    </div>
+    <button class="header-button open-popup-btn">
+        unlock access
+        <div class="header-button-discount">
+            save
+            <br>
+            <span>
+                80%
+            </span>
+        </div>
+    </button>
+    <p class="header-bootom-text">
+        СLEAR PATH FOR YOUR BODY is waiting!
+    </p>
+</header></div>
+    </div>
+    <div id="tab-header_component_1-html" class="tab-panel">
+      <pre><code>&lt;header class="header" data-component="main"&gt;
+    &lt;div class="section-1-top open-popup-btn"&gt;
+        &lt;p class="section-1-top-left"&gt;
+            ONLINE COURSES
+        &lt;/p&gt;
+        &lt;div class="section-1-top-right"&gt;
+            &lt;img src="./assets/images/house.png" alt=""&gt;
+            &lt;p&gt;Train At Home&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;h1 class="header-title"&gt;
+        1 year
+        &lt;br&gt;
+        access to
+    &lt;/h1&gt;
+    &lt;h2 class="header-subTitle"&gt;
+        all programs
+    &lt;/h2&gt;
+    &lt;img src="./assets/images/karina.webp" class="karina" alt=""&gt;
+    &lt;div class="header-programs"&gt;
+
+        &lt;h2 class="header-programs-value"&gt;
+            10
+        &lt;/h2&gt;
+        &lt;h3 class="header-programs-title"&gt;
+            Programs
+            &lt;br&gt;
+            &lt;span&gt;+ All Courses Updates&lt;/span&gt;
+        &lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class="header-price"&gt;
+        &lt;h2 class="header-price-title"&gt;
+            199€
+        &lt;/h2&gt;
+        &lt;p class="header-price-text"&gt;
+            was 899€
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="marquee-container"&gt;
+        &lt;div class="marquee-content" id="marquee"&gt;
+            &lt;img src="./assets/images/slide-fon-1.webp" alt="1"&gt;
+            &lt;img src="./assets/images/slide-fon-2.webp" alt="2"&gt;
+            &lt;img src="./assets/images/slide-fon-3.webp" alt="3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button class="header-button open-popup-btn"&gt;
+        unlock access
+        &lt;div class="header-button-discount"&gt;
+            save
+            &lt;br&gt;
+            &lt;span&gt;
+                80%
+            &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/button&gt;
+    &lt;p class="header-bootom-text"&gt;
+        СLEAR PATH FOR YOUR BODY is waiting!
+    &lt;/p&gt;
+&lt;/header&gt;</code></pre>
+    </div>
+    <div id="tab-header_component_1-scss" class="tab-panel"><pre><code>.header {
+    min-height: 600px;
+    padding-top: 20px;
+    position: relative;
+}
+
+.header::after{
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 112px 181px #9CB4CD;
+}
+
+.section-1-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 3;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 0px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.08);
+    background: linear-gradient(169deg, rgba(255, 255, 255, 0.885) 0%, rgba(255, 255, 255, 0.289) 100%);
+    border-radius: 20px;
+}
+
+.section-1-top-left {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    border-radius: 56px;
+    min-width: 185px;
+    height: 39px;
+    background: linear-gradient(90deg, #52acff 0%, #0084ff 50.48%, #52acff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-1-top-right {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 65%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+    min-width: 120px;
+    padding-right: 12px;
+    height: 39px;
+    gap: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-1-top-right img {
+    width: 18px;
+    height: 18px;
+}
+
+.header-title {
+    font-weight: 500;
+    font-size: 90px;
+    line-height: 89%;
+    letter-spacing: 0.04em;
+    font-family: 'DrukCyr';
+    text-transform: uppercase;
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #000;
+}
+
+.header-subTitle {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 121%;
+    margin-top: -12px;
+    text-align: center;
+    font-family: 'Bleeker';
+    color: #0084ff;
+}
+
+.karina {
+    width: 100%;
+    position: relative;
+    z-index: 5;
+    margin-top: -5%;
+}
+
+.header-button {
+    border-radius: 51px;
+    max-width: 297px;
+    width: 100%;
+    height: 76px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 406%;
+    text-transform: uppercase;
+    position: relative;
+    font-family: 'Unbounded';
+    z-index: 9;
+    text-align: center;
+    color: #fff;
+    margin: -27% auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 0 10px;
+    gap: 10px;
+    box-shadow: inset 0 4px 41px 0 #c5e3ff;
+    background: linear-gradient(179deg, #0084ff 0%, #004f99 100%);
+}
+
+.header-button-discount {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    height: 65px;
+    width: 65px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 100%;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 158%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+}
+
+.header-button-discount span {
+    font-size: 16px;
+    color: #0082ff;
+}
+
+.header-bootom-text{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    padding: 10px 0 20px 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+}
+
+.header-price{
+    border: 3px solid rgba(0, 132, 255, 0.51);
+    background: rgba(255, 255, 255, 0.91);
+    border-radius: 16px;
+    padding: 16px;
+    width: 144px;
+    height: 69px;
+    position: absolute;
+    bottom: 24%;
+    right: 5%;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-price-title{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 50%;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    font-family: 'Unbounded';
+    text-transform: uppercase;
+    text-align: center;
+    color: #0084ff;
+}
+
+.header-price-text{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 80%;
+    text-align: center;
+    position: relative;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.header-price-text::after{
+    content: "";
+    display: block;
+    background-color: #eb0000;
+    width: 100px;
+    height: 2px;
+    position: absolute;
+    left: -5px;
+    top: 10px;
+}
+
+.header-programs{
+    background-image: url(../assets/images/plashka.png);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    position: absolute;
+    bottom: 38%;
+    left: 7%;
+    padding: 16px;
+    z-index: 3;
+    width: 103px;
+    height: 123px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-programs::after{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: -1;
+    background-color: #fff;
+    top: 51px;
+    left: 38px;
+    box-shadow: 0 0 23px 28px #fff;
+    border-radius: 100%;
+}
+
+.list-img{
+    width: 25px;
+    object-fit: contain;
+}
+
+.header-programs-value{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 40%;
+    padding: 20px 0 10px;
+    font-family: 'Unbounded';
+    text-transform: uppercase;
+    text-align: center;
+    color: #0084ff;
+}
+
+.header-programs-title{
+    font-weight: 700;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    gap: 8px;
+    margin-bottom: -25px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.header-programs-title span{
+    font-weight: 700;
+    font-size: 10px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    border-radius: 200px;
+    background: linear-gradient(59deg, #ddecffc4 0%, #c6dcefbd 100%);
+    backdrop-filter: blur(2px);
+    width: 105px;
+    height: 28px;
+    text-align: center;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+    padding: 20px 0;
+    white-space: nowrap;
+    position: absolute;
+
+    bottom: 40%;
+    left: 0;
+}
+
+.marquee-content {
+    display: inline-flex;
+    gap: 7px;
+    will-change: transform;
+}
+
+.marquee-content img {
+    width: 300px; /* Налаштуй ширину під себе */
+    height: auto;
+    object-fit: cover;
+    filter: blur(0.5px);
+    flex-shrink: 0;
+}
+
+@media(max-width: 400px){
+    .marquee-container{
+        bottom: 39%;
+    }
+    .marquee-content img{
+        width: 270px;
+    }
+    .header-programs-value {
+        font-size: 42px;
+    }
+    .header-programs {
+        padding: 14px;
+        width: 95px;
+        height: 111px;
+    }
+    .header-programs-value {    
+        padding: 15px 0 10px;
+    }
+
+    .list-img {
+        width: 20px;
+        object-fit: contain;
+    }
+
+    .header-price-title{
+        font-size: 28px;
+    }
+
+    .header-price-text {
+        font-size: 18px;
+    }
+
+    .header-price-text::after {
+        width: 92px;
+        height: 2px;
+        position: absolute;
+        left: -8px;
+        top: 8px;
+    }
+
+    .header-price{
+        width: 125px;
+        height: 60px;
+    }
+}</code></pre></div>
+    <div id="tab-header_component_1-js" class="tab-panel"><pre><code>const marquee = document.getElementById('marquee');
+let speed = 0.3; // Швидкість (чим більше число, тим швидше)
+let offset = 0;
+
+// 1. Клонуємо контент для створення ілюзії нескінченності
+marquee.innerHTML += marquee.innerHTML; 
+
+function animate() {
+    offset -= speed;
+    
+    // 2. Коли перша половина (оригінальні 3 фото) повністю пішла вліво
+    // ми скидаємо offset на 0, щоб почати цикл заново непомітно
+    if (Math.abs(offset) &gt;= marquee.scrollWidth / 2) {
+        offset = 0;
+    }
+    
+    marquee.style.transform = `translateX(${offset}px)`;
+    
+    requestAnimationFrame(animate);
+}
+
+// Запускаємо конвеєр
+animate();
+
+// Опціонально: зупинка при наведенні мишки
+marquee.addEventListener('mouseenter', () =&gt; speed = 0);
+marquee.addEventListener('mouseleave', () =&gt; speed = 1);</code></pre></div>
+  </div>
+  <img src="x" onerror="(function(){ try{ const marquee = document.getElementById('marquee'); let speed = 0.3; // Швидкість (чим більше число, тим швидше) let offset = 0;  // 1. Клонуємо контент для створення ілюзії нескінченності marquee.innerHTML += marquee.innerHTML;   function animate() {     offset -= speed;          // 2. Коли перша половина (оригінальні 3 фото) повністю пішла вліво     // ми скидаємо offset на 0, щоб почати цикл заново непомітно     if (Math.abs(offset) >= marquee.scrollWidth / 2) {         offset = 0;     }          marquee.style.transform = `translateX(${offset}px)`;          requestAnimationFrame(animate); }  // Запускаємо конвеєр animate();  // Опціонально: зупинка при наведенні мишки marquee.addEventListener('mouseenter', () => speed = 0); marquee.addEventListener('mouseleave', () => speed = 1); }catch(e){console.error(e)}})();this.remove();" style="display:none;">
+</section>
