@@ -154,6 +154,7 @@
   height: 380px;
   border-radius: 20px;
 }</style>
+
   <div class="component-header">
     <h2>slider_video_1</h2>
     <div class="component-controls">
@@ -161,12 +162,14 @@
       <button class="btn-del" onclick="deleteFullComponent('slider_video_1')">🗑 Delete</button>
     </div>
   </div>
+
   <div class="tabs-nav">
     <button class="tab-link active" onclick="openTab(event, 'slider_video_1', 'preview')">Preview</button>
     <button class="tab-link" onclick="openTab(event, 'slider_video_1', 'html')">HTML</button>
     <button class="tab-link" onclick="openTab(event, 'slider_video_1', 'scss')">SCSS</button>
     <button class="tab-link" onclick="openTab(event, 'slider_video_1', 'js')">JS</button>
   </div>
+
   <div class="tabs-content">
     <div id="tab-slider_video_1-preview" class="tab-panel active">
       <div class="component-body"><section class="slider_video_1" data-component>
@@ -226,6 +229,7 @@
     </div>
 </div></div>
     </div>
+
     <div id="tab-slider_video_1-html" class="tab-panel">
       <pre><code>&lt;section class="slider_video_1" data-component&gt;
     &lt;h3 class="slider_video_1-title"&gt;
@@ -284,6 +288,7 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
     </div>
+
     <div id="tab-slider_video_1-scss" class="tab-panel"><pre><code>.slider_video_1 {
   position: relative;
 
@@ -548,17 +553,23 @@
 })();
 </code></pre></div>
   </div>
-  <script>
-(function(){
-  try {
-    const root = document.currentScript.closest('#card-slider_video_1');
-    if (!root) return;
 
-    (function(root){
-      (function () {
+  <script>
+  (function(){
+    try {
+      const root = document.currentScript.closest('#card-slider_video_1');
+      if (!root) return;
+
+      (function(root){
+        {/* <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    
+     */}
+
+
+(function () {
   // ---------- POPUP ----------
-  const popup = document.getElementById('videoPopup');
-  const video = document.getElementById('popupVideo');
+  const popup = root.querySelector('videoPopup');
+  const video = root.querySelector('popupVideo');
 
   function openPopup(src) {
     if (!src) return;
@@ -578,7 +589,7 @@
     popup.classList.remove('active');
   }
 
-  document.addEventListener('click', (e) => {
+  root.addEventListener('click', (e) => {
     // відкриття popup
     const trigger = e.target.closest('.slider_video_1-trigger');
     if (trigger) {
@@ -627,12 +638,12 @@
     });
   }
 })();
-    })(root);
+      })(root);
 
-  } catch(e) {
-    console.error(e);
-  }
-})();
-</script>
+    } catch(e) {
+      console.error(e);
+    }
+  })();
+  </script>
 
 </section>
