@@ -1,10 +1,11 @@
-.header {
+.header-1 {
     min-height: 600px;
     padding-top: 20px;
     position: relative;
+    background-color: #fff;
 }
 
-.header::after{
+.header-1::after{
     content: "";
     display: block;
     position: absolute;
@@ -68,12 +69,12 @@
     height: 18px;
 }
 
-.header-title {
+.header-1-title {
     font-weight: 500;
     font-size: 90px;
     line-height: 89%;
     letter-spacing: 0.04em;
-    font-family: 'DrukCyr';
+    font-family: 'DrukCyr-medium';
     text-transform: uppercase;
     position: relative;
     z-index: 3;
@@ -81,7 +82,7 @@
     color: #000;
 }
 
-.header-subTitle {
+.header-1-subTitle {
     font-weight: 400;
     font-size: 48px;
     line-height: 121%;
@@ -98,7 +99,7 @@
     margin-top: -5%;
 }
 
-.header-button {
+.header-1-button {
     border-radius: 51px;
     max-width: 297px;
     width: 100%;
@@ -122,7 +123,7 @@
     background: linear-gradient(179deg, #0084ff 0%, #004f99 100%);
 }
 
-.header-button-discount {
+.header-1-button-discount {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     background-color: #fff;
     height: 65px;
@@ -140,12 +141,12 @@
     color: #000;
 }
 
-.header-button-discount span {
+.header-1-button-discount span {
     font-size: 16px;
     color: #0082ff;
 }
 
-.header-bootom-text{
+.header-1-bootom-text{
     font-weight: 500;
     font-size: 14px;
     line-height: 143%;
@@ -155,7 +156,7 @@
     color: #000;
 }
 
-.header-price{
+.header-1-price{
     border: 3px solid rgba(0, 132, 255, 0.51);
     background: rgba(255, 255, 255, 0.91);
     border-radius: 16px;
@@ -172,7 +173,7 @@
     align-items: center;
 }
 
-.header-price-title{
+.header-1-price-title{
     font-weight: 700;
     font-size: 32px;
     line-height: 50%;
@@ -184,7 +185,7 @@
     color: #0084ff;
 }
 
-.header-price-text{
+.header-1-price-text{
     font-weight: 600;
     font-size: 20px;
     line-height: 80%;
@@ -193,7 +194,7 @@
     color: rgba(0, 0, 0, 0.8);
 }
 
-.header-price-text::after{
+.header-1-price-text::after{
     content: "";
     display: block;
     background-color: #eb0000;
@@ -204,7 +205,7 @@
     top: 10px;
 }
 
-.header-programs{
+.header-1-programs{
     background-image: url(../assets/images/plashka.png);
     background-size: cover; 
     background-position: center; 
@@ -222,7 +223,7 @@
     justify-content: center;
 }
 
-.header-programs::after{
+.header-1-programs::after{
     content: "";
     display: block;
     width: 20px;
@@ -241,7 +242,7 @@
     object-fit: contain;
 }
 
-.header-programs-value{
+.header-1-programs-value{
     font-weight: 700;
     font-size: 48px;
     line-height: 40%;
@@ -252,7 +253,7 @@
     color: #0084ff;
 }
 
-.header-programs-title{
+.header-1-programs-title{
     font-weight: 700;
     font-size: 10px;
     display: flex;
@@ -263,7 +264,7 @@
     text-transform: uppercase;
     text-align: center;
 }
-.header-programs-title span{
+.header-1-programs-title span{
     font-weight: 700;
     font-size: 10px;
     color: #000;
@@ -312,15 +313,15 @@
     .marquee-content img{
         width: 270px;
     }
-    .header-programs-value {
+    .header-1-programs-value {
         font-size: 42px;
     }
-    .header-programs {
+    .header-1-programs {
         padding: 14px;
         width: 95px;
         height: 111px;
     }
-    .header-programs-value {    
+    .header-1-programs-value {    
         padding: 15px 0 10px;
     }
 
@@ -329,15 +330,15 @@
         object-fit: contain;
     }
 
-    .header-price-title{
+    .header-1-price-title{
         font-size: 28px;
     }
 
-    .header-price-text {
+    .header-1-price-text {
         font-size: 18px;
     }
 
-    .header-price-text::after {
+    .header-1-price-text::after {
         width: 92px;
         height: 2px;
         position: absolute;
@@ -345,7 +346,7 @@
         top: 8px;
     }
 
-    .header-price{
+    .header-1-price{
         width: 125px;
         height: 60px;
     }
