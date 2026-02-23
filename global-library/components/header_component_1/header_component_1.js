@@ -1,27 +1,41 @@
-const marquee = document.getElementById('marquee');
-let speed = 0.3; // Швидкість (чим більше число, тим швидше)
-let offset = 0;
+const marqueeComponent = () => {
+  const init = () => {
+    const marquee = document.getElementById('marquee');
+    if (!marquee) return; // захист на випадок, якщо елемент відсутній
 
-// 1. Клонуємо контент для створення ілюзії нескінченності
-marquee.innerHTML += marquee.innerHTML; 
+    let speed = 0.3; // Швидкість (чим більше число, тим швидше)
+    let offset = 0;
 
-function animate() {
-    offset -= speed;
-    
-    // 2. Коли перша половина (оригінальні 3 фото) повністю пішла вліво
-    // ми скидаємо offset на 0, щоб почати цикл заново непомітно
-    if (Math.abs(offset) >= marquee.scrollWidth / 2) {
+    // 1. Клонуємо контент для нескінченності
+    marquee.innerHTML += marquee.innerHTML;
+
+    // 2. Анімація
+    const animate = () => {
+      offset -= speed;
+
+      // Коли перша половина пройшла
+      if (Math.abs(offset) >= marquee.scrollWidth / 2) {
         offset = 0;
-    }
-    
-    marquee.style.transform = `translateX(${offset}px)`;
-    
-    requestAnimationFrame(animate);
-}
+      }
 
-// Запускаємо конвеєр
-animate();
+      marquee.style.transform = `translateX(${offset}px)`;
 
-// Опціонально: зупинка при наведенні мишки
-marquee.addEventListener('mouseenter', () => speed = 0);
-marquee.addEventListener('mouseleave', () => speed = 1);
+      requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    // 3. Зупинка/продовження при hover
+    marquee.addEventListener('mouseenter', () => (speed = 0));
+    marquee.addEventListener('mouseleave', () => (speed = 0.3));
+  };
+
+  // Ініціалізація після DOM
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+};
+
+export default marqueeComponent;
