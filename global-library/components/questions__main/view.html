@@ -66,6 +66,7 @@
 .questions .questionsContainer-item .questionsContainer-item-bottom .question-text {
   padding: 0 0 15px 0;
 }</style>
+
   <div class="component-header">
     <h2>questions__main</h2>
     <div class="component-controls">
@@ -73,12 +74,14 @@
       <button class="btn-del" onclick="deleteFullComponent('questions__main')">🗑 Delete</button>
     </div>
   </div>
+
   <div class="tabs-nav">
     <button class="tab-link active" onclick="openTab(event, 'questions__main', 'preview')">Preview</button>
     <button class="tab-link" onclick="openTab(event, 'questions__main', 'html')">HTML</button>
     <button class="tab-link" onclick="openTab(event, 'questions__main', 'scss')">SCSS</button>
     <button class="tab-link" onclick="openTab(event, 'questions__main', 'js')">JS</button>
   </div>
+
   <div class="tabs-content">
     <div id="tab-questions__main-preview" class="tab-panel active">
       <div class="component-body"><div class="questions" data-component>
@@ -144,6 +147,7 @@
     </div>
 </div></div>
     </div>
+
     <div id="tab-questions__main-html" class="tab-panel">
       <pre><code>&lt;div class="questions" data-component&gt;
     &lt;div class="questionsContainer"&gt;
@@ -208,6 +212,7 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
     </div>
+
     <div id="tab-questions__main-scss" class="tab-panel"><pre><code>
 .questions {
   padding-bottom: 30px;
@@ -322,5 +327,52 @@
 
 export default questions__main;</code></pre></div>
   </div>
-  <img src="x" onerror="(function(){ try{ const questions__main = () => {   const items = document.querySelectorAll(&quot;.questionsContainer-item&quot;);      items.forEach((item) => {     const top = item.querySelector(&quot;.questionsContainer-item-top&quot;);     const bottom = item.querySelector(&quot;.questionsContainer-item-bottom&quot;);     const label = item.querySelector(&quot;.label&quot;);      bottom.style.maxHeight = &quot;0&quot;;     bottom.style.overflow = &quot;hidden&quot;;     bottom.style.transition = &quot;max-height 0.4s ease&quot;;      top.addEventListener(&quot;click&quot;, () => {       const isActive = item.classList.contains(&quot;active&quot;);        items.forEach((el) => {         el.classList.remove(&quot;active&quot;);         el.querySelector(&quot;.questionsContainer-item-bottom&quot;).style.maxHeight = &quot;0&quot;;         el.querySelector(&quot;.label&quot;).textContent = &quot;+&quot;;       });        if (!isActive) {         item.classList.add(&quot;active&quot;);         bottom.style.maxHeight = bottom.scrollHeight + &quot;px&quot;;         label.textContent = &quot;–&quot;;       }     });   });  }  export default questions__main; }catch(e){console.error(e)}})();this.remove();" style="display:none;">
+
+  <script>
+  (function(){
+    try {
+      const root = document.currentScript.closest('#card-questions__main');
+      if (!root) return;
+
+      (function(root){
+        const questions__main = () => {
+  const items = root.querySelectorAll(".questionsContainer-item");
+  
+  items.forEach((item) => {
+    const top = item.querySelector(".questionsContainer-item-top");
+    const bottom = item.querySelector(".questionsContainer-item-bottom");
+    const label = item.querySelector(".label");
+
+    bottom.style.maxHeight = "0";
+    bottom.style.overflow = "hidden";
+    bottom.style.transition = "max-height 0.4s ease";
+
+    top.addEventListener("click", () => {
+      const isActive = item.classList.contains("active");
+
+      items.forEach((el) => {
+        el.classList.remove("active");
+        el.querySelector(".questionsContainer-item-bottom").style.maxHeight = "0";
+        el.querySelector(".label").textContent = "+";
+      });
+
+      if (!isActive) {
+        item.classList.add("active");
+        bottom.style.maxHeight = bottom.scrollHeight + "px";
+        label.textContent = "–";
+      }
+    });
+  });
+
+}
+
+questions__main;
+      })(root);
+
+    } catch(e) {
+      console.error(e);
+    }
+  })();
+  </script>
+
 </section>
