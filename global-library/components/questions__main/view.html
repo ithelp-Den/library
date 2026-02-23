@@ -290,37 +290,50 @@
   }
 }</code></pre></div>
     <div id="tab-questions__main-js" class="tab-panel"><pre><code>const questions__main = () =&gt; {
-  const items = document.querySelectorAll(".questionsContainer-item");
-  
-  items.forEach((item) =&gt; {
-    const top = item.querySelector(".questionsContainer-item-top");
-    const bottom = item.querySelector(".questionsContainer-item-bottom");
-    const label = item.querySelector(".label");
+  const init = () =&gt; {
+    const items = document.querySelectorAll(".questionsContainer-item");
+    if (!items.length) return;
 
-    bottom.style.maxHeight = "0";
-    bottom.style.overflow = "hidden";
-    bottom.style.transition = "max-height 0.4s ease";
+    items.forEach((item) =&gt; {
+      const top = item.querySelector(".questionsContainer-item-top");
+      const bottom = item.querySelector(".questionsContainer-item-bottom");
+      const label = item.querySelector(".label");
 
-    top.addEventListener("click", () =&gt; {
-      const isActive = item.classList.contains("active");
+      if (!top || !bottom || !label) return;
 
-      items.forEach((el) =&gt; {
-        el.classList.remove("active");
-        el.querySelector(".questionsContainer-item-bottom").style.maxHeight = "0";
-        el.querySelector(".label").textContent = "+";
+      bottom.style.maxHeight = "0";
+      bottom.style.overflow = "hidden";
+      bottom.style.transition = "max-height 0.4s ease";
+
+      top.addEventListener("click", () =&gt; {
+        const isActive = item.classList.contains("active");
+
+        items.forEach((el) =&gt; {
+          el.classList.remove("active");
+          const elBottom = el.querySelector(".questionsContainer-item-bottom");
+          const elLabel = el.querySelector(".label");
+          if (elBottom) elBottom.style.maxHeight = "0";
+          if (elLabel) elLabel.textContent = "+";
+        });
+
+        if (!isActive) {
+          item.classList.add("active");
+          bottom.style.maxHeight = bottom.scrollHeight + "px";
+          label.textContent = "–";
+        }
       });
-
-      if (!isActive) {
-        item.classList.add("active");
-        bottom.style.maxHeight = bottom.scrollHeight + "px";
-        label.textContent = "–";
-      }
     });
-  });
+  };
 
-}
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+};
 
-export default questions__main;</code></pre></div>
+export default questions__main;
+</code></pre></div>
   </div>
-  <img src="x" onerror="(function(){ try{ const questions__main = () => {   const items = document.querySelectorAll(&quot;.questionsContainer-item&quot;);      items.forEach((item) => {     const top = item.querySelector(&quot;.questionsContainer-item-top&quot;);     const bottom = item.querySelector(&quot;.questionsContainer-item-bottom&quot;);     const label = item.querySelector(&quot;.label&quot;);      bottom.style.maxHeight = &quot;0&quot;;     bottom.style.overflow = &quot;hidden&quot;;     bottom.style.transition = &quot;max-height 0.4s ease&quot;;      top.addEventListener(&quot;click&quot;, () => {       const isActive = item.classList.contains(&quot;active&quot;);        items.forEach((el) => {         el.classList.remove(&quot;active&quot;);         el.querySelector(&quot;.questionsContainer-item-bottom&quot;).style.maxHeight = &quot;0&quot;;         el.querySelector(&quot;.label&quot;).textContent = &quot;+&quot;;       });        if (!isActive) {         item.classList.add(&quot;active&quot;);         bottom.style.maxHeight = bottom.scrollHeight + &quot;px&quot;;         label.textContent = &quot;–&quot;;       }     });   });  }  export default questions__main; }catch(e){console.error(e)}})();this.remove();" style="display:none;">
+  <img src="x" onerror="(function(){ try{ const questions__main = () => {   const init = () => {     const items = document.querySelectorAll(&quot;.questionsContainer-item&quot;);     if (!items.length) return;      items.forEach((item) => {       const top = item.querySelector(&quot;.questionsContainer-item-top&quot;);       const bottom = item.querySelector(&quot;.questionsContainer-item-bottom&quot;);       const label = item.querySelector(&quot;.label&quot;);        if (!top || !bottom || !label) return;        bottom.style.maxHeight = &quot;0&quot;;       bottom.style.overflow = &quot;hidden&quot;;       bottom.style.transition = &quot;max-height 0.4s ease&quot;;        top.addEventListener(&quot;click&quot;, () => {         const isActive = item.classList.contains(&quot;active&quot;);          items.forEach((el) => {           el.classList.remove(&quot;active&quot;);           const elBottom = el.querySelector(&quot;.questionsContainer-item-bottom&quot;);           const elLabel = el.querySelector(&quot;.label&quot;);           if (elBottom) elBottom.style.maxHeight = &quot;0&quot;;           if (elLabel) elLabel.textContent = &quot;+&quot;;         });          if (!isActive) {           item.classList.add(&quot;active&quot;);           bottom.style.maxHeight = bottom.scrollHeight + &quot;px&quot;;           label.textContent = &quot;–&quot;;         }       });     });   };    if (document.readyState === 'loading') {     document.addEventListener('DOMContentLoaded', init);   } else {     init();   } };  export default questions__main; }catch(e){console.error(e)}})();this.remove();" style="display:none;">
 </section>
