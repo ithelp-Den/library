@@ -335,7 +335,8 @@ export default questions__main;</code></pre></div>
       if (!root) return;
 
       (function(root){
-        const questions__main = () => {
+        (function(root){
+const questions__main = () => {
   const items = root.querySelectorAll(".questionsContainer-item");
   
   items.forEach((item) => {
@@ -367,6 +368,7 @@ export default questions__main;</code></pre></div>
 }
 
 questions__main;
+})(document.currentScript.closest('#undefined'));
 if(typeof questions__main === 'function'){ questions__main(); }
       })(root);
 
