@@ -12,5 +12,6 @@
   "inside_component",
   "pain_components",
   "roadmap_component",
-  "swiper_slider"
+  "swiper_slider",
+  "table_container"
 ]
