@@ -1,0 +1,137 @@
+@use "sass:math";
+
+@mixin resize($min, $max, $property: font-size, $min-vw: 340px, $max-vw: 1900px) {
+  // Видалення одиниць вимірювання
+  $min-no-unit: math.div($min, ($min * 0 + 1));
+  $max-no-unit: math.div($max, ($max * 0 + 1));
+  $min-vw-no-unit: math.div($min-vw, ($min-vw * 0 + 1));
+  $max-vw-no-unit: math.div($max-vw, ($max-vw * 0 + 1));
+
+  // Перетворення в REM
+  $min-rem: math.div($min-no-unit, 16);
+  $max-rem: math.div($max-no-unit, 16);
+  
+  // Розрахунок формули для плавної зміни
+  $slope: math.div($max-rem - $min-rem, math.div($max-vw-no-unit - $min-vw-no-unit, 16));
+  $y-axis: -1 * $min-vw-no-unit * math.div($slope, 16) + $min-rem;
+
+  // Динамічне ім'я властивості
+  #{$property}: clamp(
+    #{$min-rem}rem,
+    #{$y-axis}rem + #{ $slope * 100 }vw,
+    #{$max-rem}rem
+  );
+}
+
+
+.swiper_slider {
+  max-width: 100%;
+  position: relative;
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    @include resize(360px, 703px, height); 
+    margin: 0 5px !important;
+    width: 100%;
+    padding-top: 20px;
+    object-fit: contain;
+    min-width: 0; /* критично */
+  }
+
+  /* стрілки */
+
+  .swiper-buttons{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 5px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #000;
+    position: relative;
+    border-radius: 150px;
+    top: 0;
+    width: 115px;
+    height: 51px;
+    @include resize(115px, 176px, width); 
+    @include resize(51px, 95px, height); 
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .swiper-button-prev{
+    box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.19);
+background: rgba(255, 255, 255, 0.45);
+
+    &:after{
+        background: url(../../assets/images/slider-arrow-l.png);
+        font-size: 0;
+    background-size: 80%;
+    width: 54px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+  }
+
+  .swiper-button-next{
+    backdrop-filter: blur(0px);
+box-shadow: inset 0 4px 21px 0 #048923;
+background: linear-gradient(174deg, #0ec63a 0%, #01711c 100%);
+
+    &:after{
+        background: url(../../assets/images/slider-arrow-r.png);
+        font-size: 0;
+    background-size: 80%;
+    width: 54px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+  }
+
+  .swiper-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 5px 0 5px;
+  }
+  /* крапки */
+  .swiper-pagination{
+    position: initial;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    max-width: 190px;
+  }
+  .swiper-pagination-bullet {
+    background-color: transparent;
+    border: 1px solid #027b1e;
+    opacity: 1;
+    margin: 3px;
+    @include resize(3px, 16px, height); 
+    @include resize(3px, 16px, width); 
+    @include resize(3px, 16px, margin); 
+  }
+
+  .swiper-pagination-bullet-active {
+    border: 3px solid #01AB2A;
+    background-color: #00F03A;
+    @include resize(5px, 20px, height); 
+    @include resize(5px, 20px, width); 
+  }
+}
