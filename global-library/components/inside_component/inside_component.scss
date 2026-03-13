@@ -1,0 +1,161 @@
+@use "sass:math";
+
+@mixin resize(
+  $min,
+  $max,
+  $property: font-size,
+  $min-vw: 340px,
+  $max-vw: 1444px
+) {
+  // Видалення одиниць вимірювання
+  $min-no-unit: math.div($min, ($min * 0 + 1));
+  $max-no-unit: math.div($max, ($max * 0 + 1));
+  $min-vw-no-unit: math.div($min-vw, ($min-vw * 0 + 1));
+  $max-vw-no-unit: math.div($max-vw, ($max-vw * 0 + 1));
+
+  // Перетворення в REM
+  $min-rem: math.div($min-no-unit, 16);
+  $max-rem: math.div($max-no-unit, 16);
+
+  // Розрахунок формули для плавної зміни
+  $slope: math.div(
+    $max-rem - $min-rem,
+    math.div($max-vw-no-unit - $min-vw-no-unit, 16)
+  );
+  $y-axis: -1 * $min-vw-no-unit * math.div($slope, 16) + $min-rem;
+
+  // Динамічне ім'я властивості
+  #{$property}: clamp(
+    #{$min-rem}rem,
+    #{$y-axis}rem + #{$slope * 100}vw,
+    #{$max-rem}rem
+  );
+}
+
+.inside_components {
+  position: relative;
+  max-width: 1244px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &-wrapper {
+    &-img {
+      min-width: 120%;
+        @include resize(500px, 900px, max-height);
+        -o-object-fit: contain;
+        object-fit: contain;
+        position: absolute;
+        object-position: right;
+        right: -13%;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    &-elements {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        @include resize(10px, 28px, gap);
+        margin-top: -20px;
+        padding: 50px 10px 30px 10px;
+    }
+  }
+}
+
+.wrapper-element-row{
+            display: flex;
+        flex-direction: column;
+        @include resize(10px, 28px, gap);
+        justify-content: center;
+        align-items: flex-start;
+        }
+
+.wrapper-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  &-title {
+    font-weight: 700;
+    @include resize(14px, 32px);
+    line-height: 109%;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 11px;
+    @include resize(94px, 204px, width);
+    @include resize(26px, 53px, height);
+    background: linear-gradient(90deg, #b8e3c2 0%, #b9e4c3 100%);
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9px;
+      @include resize(90px, 200px, width);
+        @include resize(23px, 49px, height);
+      background: linear-gradient(90deg, #55aa69 0%, #6dda87 100%);
+    }
+  }
+
+  &-subTitle {
+    font-weight: 700;
+    @include resize(12px, 32px);
+    line-height: 109%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+  }
+
+  &-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    img {
+        @include resize(90px, 197px, width);
+        @include resize(58px, 127px, height);
+    }
+  }
+}
+
+@media(min-width: 700px){
+    .inside_components-wrapper-img{
+        right: -3%;
+      }
+}
+
+@media (min-width: 800px) {
+  .inside_components {
+    &-wrapper {
+      padding: 20px 0;
+      min-height: 450px;
+
+      &-elements{
+        align-items: center;
+        position: relative;
+        left: -10%;
+        padding: 150px 0 115px 0;
+      }
+    }
+  }
+
+  .wrapper-element-row{
+        flex-direction: row;
+    }
+
+  .wrapper-element-subTitle {
+    @include resize(30px, 70px, height);
+    display: flex;
+    align-items: center;
+    }
+}
+
