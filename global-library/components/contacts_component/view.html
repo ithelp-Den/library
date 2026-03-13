@@ -1,0 +1,292 @@
+<section class="component-card" id="card-contacts_component" data-name="contacts_component">
+  <style>.contacts {
+  background: #1b1b1b;
+  border-radius: 25px;
+  max-width: 1244px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+.contacts-title {
+  font-weight: 600;
+  font-size: clamp(4rem, 3.6920289855rem + 1.4492753623vw, 5rem);
+  line-height: 80%;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "ActayWide-Bold";
+  color: #fff;
+  text-shadow: 0 22px 17px rgba(0, 0, 0, 0.6);
+}
+
+.contacts-title span {
+  color: #01AB2A;
+}
+
+.contacts-subTitle {
+  font-weight: 600;
+  font-size: clamp(1rem, 0.8460144928rem + 0.7246376812vw, 1.5rem);
+  line-height: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  color: #fff;
+}
+
+.contacts-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  width: 100%;
+  max-width: 310px;
+  max-width: clamp(19.375rem, 13.7930253623rem + 26.268115942vw, 37.5rem);
+  margin: 0 auto;
+}
+
+.contacts-nav a {
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.7595108696rem + 0.5434782609vw, 1.25rem);
+  line-height: 143%;
+  gap: 3px;
+  padding: clamp(0.875rem, 0.7595108696rem + 0.5434782609vw, 1.25rem);
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.support_link {
+  text-align: center;
+  color: #cacaca;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.contacts-nav a img {
+  width: clamp(1.5625rem, 0.9850543478rem + 2.7173913043vw, 3.4375rem);
+  height: clamp(1.5625rem, 0.9850543478rem + 2.7173913043vw, 3.4375rem);
+  object-fit: contain;
+  margin-right: 5px;
+}
+
+.suport {
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.7595108696rem + 0.5434782609vw, 1.25rem);
+  line-height: 167%;
+  color: #cacaca;
+  text-align: center;
+}
+
+.privacy {
+  font-weight: 400;
+  padding-top: 15px;
+  font-size: clamp(0.875rem, 0.7595108696rem + 0.5434782609vw, 1.25rem);
+  line-height: 179%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-align: center;
+  color: #cacaca;
+}</style>
+  <div class="component-header">
+    <h2>contacts_component</h2>
+    <div class="component-controls">
+      <button class="btn-add" onclick="addToProject('contacts_component')">➕ Add</button>
+      <button class="btn-del" onclick="deleteFullComponent('contacts_component')">🗑 Delete</button>
+    </div>
+  </div>
+  <div class="tabs-nav">
+    <button class="tab-link active" onclick="openTab(event, 'contacts_component', 'preview')">Preview</button>
+    <button class="tab-link" onclick="openTab(event, 'contacts_component', 'html')">HTML</button>
+    <button class="tab-link" onclick="openTab(event, 'contacts_component', 'scss')">SCSS</button>
+    
+  </div>
+  <div class="tabs-content">
+    <div id="tab-contacts_component-preview" class="tab-panel active">
+      <div class="component-body"><section class="contacts">
+    <h2 class="contacts-title">
+        <span>Contact</span>
+        Information
+    </h2>
+    <h3 class="contacts-subTitle">
+        Social Media Links:
+    </h3>
+    <div class="contacts-nav">
+        <a href="https://www.instagram.com/zubalenok/">
+            <img src="./assets/icons/inst-new.png" alt="">
+            Zubalenok
+        </a>
+        <a href="https://www.instagram.com/zubalenok.team/">
+            <img src="./assets/icons/support-new.png" alt="">
+            Support
+        </a>
+        <a href="mailto:SUPPORT_ZUBALENOK@ZBL.AGENCY">
+            <img src="./assets/icons/email-new.png" alt="">
+            Email
+        </a>
+    </div>
+    <div class="support_link">
+        <a href="mailto:SUPPORT_ZUBALENOK@ZBL.AGENCY">SUPPORT_ZUBALENOK@ZBL.AGENCY</a>
+    </div>
+    <a href="/policy" style="display: block; text-align: center" class="privacy">Privacy
+        Policy and User Agreement</a>
+</section></div>
+    </div>
+    <div id="tab-contacts_component-html" class="tab-panel">
+      <pre><code>&lt;section class="contacts"&gt;
+    &lt;h2 class="contacts-title"&gt;
+        &lt;span&gt;Contact&lt;/span&gt;
+        Information
+    &lt;/h2&gt;
+    &lt;h3 class="contacts-subTitle"&gt;
+        Social Media Links:
+    &lt;/h3&gt;
+    &lt;div class="contacts-nav"&gt;
+        &lt;a href="https://www.instagram.com/zubalenok/"&gt;
+            &lt;img src="../../assets/icons/inst-new.png" alt=""&gt;
+            Zubalenok
+        &lt;/a&gt;
+        &lt;a href="https://www.instagram.com/zubalenok.team/"&gt;
+            &lt;img src="../../assets/icons/support-new.png" alt=""&gt;
+            Support
+        &lt;/a&gt;
+        &lt;a href="mailto:SUPPORT_ZUBALENOK@ZBL.AGENCY"&gt;
+            &lt;img src="../../assets/icons/email-new.png" alt=""&gt;
+            Email
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="support_link"&gt;
+        &lt;a href="mailto:SUPPORT_ZUBALENOK@ZBL.AGENCY"&gt;SUPPORT_ZUBALENOK@ZBL.AGENCY&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;a href="/policy" style="display: block; text-align: center" class="privacy"&gt;Privacy
+        Policy and User Agreement&lt;/a&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+    <div id="tab-contacts_component-scss" class="tab-panel"><pre><code>@use "sass:math";
+
+@mixin resize(
+  $min,
+  $max,
+  $property: font-size,
+  $min-vw: 340px,
+  $max-vw: 1444px
+) {
+  $min-no-unit: math.div($min, ($min * 0 + 1));
+  $max-no-unit: math.div($max, ($max * 0 + 1));
+  $min-vw-no-unit: math.div($min-vw, ($min-vw * 0 + 1));
+  $max-vw-no-unit: math.div($max-vw, ($max-vw * 0 + 1));
+
+  $min-rem: math.div($min-no-unit, 16);
+  $max-rem: math.div($max-no-unit, 16);
+
+  $slope: math.div(
+    $max-rem - $min-rem,
+    math.div($max-vw-no-unit - $min-vw-no-unit, 16)
+  );
+  $y-axis: -1 * $min-vw-no-unit * math.div($slope, 16) + $min-rem;
+
+  #{$property}: clamp(
+    #{$min-rem}rem,
+    #{$y-axis}rem + #{$slope * 100}vw,
+    #{$max-rem}rem
+  );
+}
+
+.contacts {
+    background: #1b1b1b;
+    border-radius: 25px;
+    max-width: 1244px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.contacts-title {
+    font-weight: 600;
+    @include resize(64px, 80px);
+    line-height: 80%;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "ActayWide-Bold";
+    color: #fff;
+    text-shadow: 0 22px 17px rgba(0, 0, 0, 0.6);
+}
+
+.contacts-title span {
+    color: #01AB2A;
+}
+
+.contacts-subTitle {
+    font-weight: 600;
+    @include resize(16px, 24px);
+    line-height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    color: #fff;
+}
+
+.contacts-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    width: 100%;
+    max-width: 310px;
+    @include resize(310px, 600px, max-width);
+    margin: 0 auto;
+}
+
+.contacts-nav a {
+    font-weight: 400;
+    @include resize(14px, 20px);
+    line-height: 143%;
+    gap: 3px;
+    @include resize(14px, 20px, padding);
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.support_link {
+    text-align: center;
+    color: #cacaca;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.contacts-nav a img {
+    @include resize(25px, 55px, width);
+    @include resize(25px, 55px, height);
+    object-fit: contain;
+    margin-right: 5px;
+}
+
+.suport {
+    font-weight: 400;
+    @include resize(14px, 20px);
+    line-height: 167%;
+    color: #cacaca;
+    text-align: center;
+}
+
+.privacy {
+    font-weight: 400;
+    padding-top: 15px;
+    @include resize(14px, 20px);
+    line-height: 179%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-align: center;
+    color: #cacaca;
+}
+</code></pre></div>
+    
+  </div>
+  <img src="x" onerror="(function(){ try{  }catch(e){console.error(e)}})();this.remove();" style="display:none;">
+</section>
