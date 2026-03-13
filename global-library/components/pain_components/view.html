@@ -1,0 +1,386 @@
+<section class="component-card" id="card-pain_components" data-name="pain_components">
+  <style>.pain_components {
+  position: relative;
+  max-width: 1244px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pain_components-wrapper-img {
+  min-width: 154%;
+  margin-left: -51%;
+  object-fit: contain;
+}
+.pain_components-wrapper-elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.625rem, 0.5865036232rem + 0.1811594203vw, 0.75rem);
+  margin-top: -20px;
+  padding: 0 10px;
+  margin-left: -7px;
+}
+.pain_components-wrapper-elements .elements-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 80px;
+  max-width: clamp(25rem, 21.1696105072rem + 18.0253623188vw, 37.4375rem);
+  background: linear-gradient(90deg, rgba(134, 225, 160, 0.7215686275) 0%, rgba(38, 161, 69, 0.7843137255) 50%, #a9e4ba 100%);
+  backdrop-filter: blur(5px);
+  border-radius: 16px;
+  padding: 10px;
+  gap: 10px;
+}
+.pain_components-wrapper-elements .elements-item-icon {
+  width: clamp(2.1875rem, 1.7447916667rem + 2.0833333333vw, 3.625rem);
+  height: clamp(2.1875rem, 1.7447916667rem + 2.0833333333vw, 3.625rem);
+  object-fit: contain;
+}
+.pain_components-wrapper-elements .elements-item-title {
+  font-weight: 700;
+  font-size: clamp(0.75rem, 0.5960144928rem + 0.7246376812vw, 1.25rem);
+  line-height: 109%;
+  color: #fff;
+}
+.pain_components-wrapper-elements .elements-item-text {
+  font-weight: 400;
+  padding-top: 6px;
+  font-size: clamp(0.75rem, 0.5960144928rem + 0.7246376812vw, 1.25rem);
+  line-height: 109%;
+  color: #fff;
+}
+
+.pain_components-wrapper-elements:after {
+  content: "";
+  display: block;
+  width: 0;
+  left: 50%;
+  bottom: 207px;
+  z-index: -2;
+  position: absolute;
+  height: 0;
+  box-shadow: 0 0 217px 183px rgba(2, 130, 32, 0.5333333333);
+}
+
+@media (min-width: 800px) {
+  .pain_components-wrapper-elements:after {
+    display: none;
+  }
+  .pain_components-wrapper {
+    display: flex;
+    padding: 46px 0 20px 0;
+    align-items: flex-end;
+    min-height: 450px;
+  }
+  .pain_components-wrapper-img {
+    order: 2;
+    min-width: 10%;
+    width: 80%;
+    margin-left: auto;
+    margin-bottom: -30px;
+    object-fit: contain;
+  }
+  .pain_components-wrapper-elements {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    bottom: 7%;
+    left: 20px;
+    padding: 0 10px;
+    margin-left: 0px;
+    position: absolute;
+  }
+}
+@media (min-width: 1200px) {
+  .pain_components-wrapper-elements {
+    left: clamp(0rem, -0.7699275362rem + 3.6231884058vw, 2.5rem);
+  }
+}</style>
+  <div class="component-header">
+    <h2>pain_components</h2>
+    <div class="component-controls">
+      <button class="btn-add" onclick="addToProject('pain_components')">➕ Add</button>
+      <button class="btn-del" onclick="deleteFullComponent('pain_components')">🗑 Delete</button>
+    </div>
+  </div>
+  <div class="tabs-nav">
+    <button class="tab-link active" onclick="openTab(event, 'pain_components', 'preview')">Preview</button>
+    <button class="tab-link" onclick="openTab(event, 'pain_components', 'html')">HTML</button>
+    <button class="tab-link" onclick="openTab(event, 'pain_components', 'scss')">SCSS</button>
+    
+  </div>
+  <div class="tabs-content">
+    <div id="tab-pain_components-preview" class="tab-panel active">
+      <div class="component-body"><div class="pain_components component-gap" data-component>
+    <h2 class="main-title">
+        It’s Time to Live
+        <br>
+        <span>
+            without Pain!
+        </span>
+    </h2>
+    <div class="pain_components-wrapper">
+        <img loading="lazy" src="./assets/images/pain-karina.webp" alt="" class="pain_components-wrapper-img">
+        <div class="pain_components-wrapper-elements">
+            <div class="elements-item">
+                <img loading="lazy" src="./assets/images/pain-icon-1.webp" alt="" class="elements-item-icon">
+                <div>
+                    <h3 class="elements-item-title">
+                        Do Workouts Without Pain
+                    </h3>
+                    <p class="elements-item-text">
+                        Yoga, Running, Dancing or Lifting - shouldn't hurt<br>Unlock tight muscles. Move freely again.
+                    </p>
+                </div>
+            </div>
+            <div class="elements-item">
+                <img loading="lazy" src="./assets/images/pain-icon-2.webp" alt="" class="elements-item-icon">
+                <div>
+                    <h3 class="elements-item-title">
+                        No Knee Pain
+                    </h3>
+                    <p class="elements-item-text">
+                        Tight hips force knees to compensate in bad<br>alignment. Opened hips make knees track straight.
+                    </p>
+                </div>
+            </div>
+            <div class="elements-item">
+                <img loading="lazy" src="./assets/images/pain-icon-3.webp" alt="" class="elements-item-icon">
+                <div>
+                    <h3 class="elements-item-title">
+                        No Lower Back Pain
+                    </h3>
+                    <p class="elements-item-text">
+                        80% of lower back pain comes from tight hips.<br>Fix the hips = fix the back
+                    </p>
+                </div>
+            </div>
+            <div class="elements-item">
+                <img loading="lazy" src="./assets/images/pain-icon-4.webp" alt="" class="elements-item-icon">
+                <div>
+                    <h3 class="elements-item-title">
+                        Fix Your Posture Naturally
+                    </h3>
+                    <p class="elements-item-text">
+                        Tight hip flexors tilt pelvis & round shoulders.<br>Release them — so posture improves automatically.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div id="tab-pain_components-html" class="tab-panel">
+      <pre><code>&lt;div class="pain_components component-gap" data-component&gt;
+    &lt;h2 class="main-title"&gt;
+        It’s Time to Live
+        &lt;br&gt;
+        &lt;span&gt;
+            without Pain!
+        &lt;/span&gt;
+    &lt;/h2&gt;
+    &lt;div class="pain_components-wrapper"&gt;
+        &lt;img loading="lazy" src="../../assets/images/pain-karina.webp" alt="" class="pain_components-wrapper-img"&gt;
+        &lt;div class="pain_components-wrapper-elements"&gt;
+            &lt;div class="elements-item"&gt;
+                &lt;img loading="lazy" src="../../assets/images/pain-icon-1.webp" alt="" class="elements-item-icon"&gt;
+                &lt;div&gt;
+                    &lt;h3 class="elements-item-title"&gt;
+                        Do Workouts Without Pain
+                    &lt;/h3&gt;
+                    &lt;p class="elements-item-text"&gt;
+                        Yoga, Running, Dancing or Lifting - shouldn't hurt&lt;br&gt;Unlock tight muscles. Move freely again.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="elements-item"&gt;
+                &lt;img loading="lazy" src="../../assets/images/pain-icon-2.webp" alt="" class="elements-item-icon"&gt;
+                &lt;div&gt;
+                    &lt;h3 class="elements-item-title"&gt;
+                        No Knee Pain
+                    &lt;/h3&gt;
+                    &lt;p class="elements-item-text"&gt;
+                        Tight hips force knees to compensate in bad&lt;br&gt;alignment. Opened hips make knees track straight.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="elements-item"&gt;
+                &lt;img loading="lazy" src="../../assets/images/pain-icon-3.webp" alt="" class="elements-item-icon"&gt;
+                &lt;div&gt;
+                    &lt;h3 class="elements-item-title"&gt;
+                        No Lower Back Pain
+                    &lt;/h3&gt;
+                    &lt;p class="elements-item-text"&gt;
+                        80% of lower back pain comes from tight hips.&lt;br&gt;Fix the hips = fix the back
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="elements-item"&gt;
+                &lt;img loading="lazy" src="../../assets/images/pain-icon-4.webp" alt="" class="elements-item-icon"&gt;
+                &lt;div&gt;
+                    &lt;h3 class="elements-item-title"&gt;
+                        Fix Your Posture Naturally
+                    &lt;/h3&gt;
+                    &lt;p class="elements-item-text"&gt;
+                        Tight hip flexors tilt pelvis &amp; round shoulders.&lt;br&gt;Release them — so posture improves automatically.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    <div id="tab-pain_components-scss" class="tab-panel"><pre><code>@use "sass:math";
+
+@mixin resize(
+  $min,
+  $max,
+  $property: font-size,
+  $min-vw: 340px,
+  $max-vw: 1444px
+) {
+  // Видалення одиниць вимірювання
+  $min-no-unit: math.div($min, ($min * 0 + 1));
+  $max-no-unit: math.div($max, ($max * 0 + 1));
+  $min-vw-no-unit: math.div($min-vw, ($min-vw * 0 + 1));
+  $max-vw-no-unit: math.div($max-vw, ($max-vw * 0 + 1));
+
+  // Перетворення в REM
+  $min-rem: math.div($min-no-unit, 16);
+  $max-rem: math.div($max-no-unit, 16);
+
+  // Розрахунок формули для плавної зміни
+  $slope: math.div(
+    $max-rem - $min-rem,
+    math.div($max-vw-no-unit - $min-vw-no-unit, 16)
+  );
+  $y-axis: -1 * $min-vw-no-unit * math.div($slope, 16) + $min-rem;
+
+  // Динамічне ім'я властивості
+  #{$property}: clamp(
+    #{$min-rem}rem,
+    #{$y-axis}rem + #{$slope * 100}vw,
+    #{$max-rem}rem
+  );
+}
+
+.pain_components {
+  position: relative;
+  max-width: 1244px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &amp;-wrapper {
+    &amp;-img {
+      min-width: 154%;
+      margin-left: -51%;
+      object-fit: contain;
+    }
+
+    &amp;-elements {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    @include resize(10px, 12px, gap);
+      margin-top: -20px;
+      padding: 0 10px;
+      margin-left: -7px;
+
+      .elements-item {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: 80px;
+        @include resize(400px, 599px, max-width);
+        background: linear-gradient(90deg, #86e1a0b8 0%, #26a145c8 50%, #a9e4ba 100%);
+        backdrop-filter: blur(5px);
+        border-radius: 16px;
+        padding: 10px;
+        gap: 10px;
+        &amp;-icon {
+          @include resize(35px, 58px, width);
+          @include resize(35px, 58px, height);
+          object-fit: contain;
+        }
+        &amp;-title {
+          font-weight: 700;
+          @include resize(12px, 20px);
+          line-height: 109%;
+          color: #fff;
+        }
+        &amp;-text {
+          font-weight: 400;
+          padding-top: 6px;
+          @include resize(12px, 20px);
+          line-height: 109%;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.pain_components-wrapper-elements:after{
+    content: "";
+    display: block;
+    width: 0;
+    left: 50%;
+    bottom: 207px;
+    z-index: -2;
+    position: absolute;
+    height: 0;
+    box-shadow: 0 0 217px 183px #02822088;
+}
+
+@media (min-width: 800px) {
+    .pain_components-wrapper-elements:after{
+        display: none;
+    }
+  .pain_components {
+    &amp;-wrapper {
+        display: flex;
+        padding: 46px 0 20px 0;
+        align-items: flex-end;
+        min-height: 450px;
+      &amp;-img {
+        order: 2;
+        min-width: 10%;
+        width: 80%;
+        margin-left: auto;
+        margin-bottom: -30px;
+        object-fit: contain;
+      }
+
+      &amp;-elements {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+        bottom: 7%;
+        left: 20px;
+        padding: 0 10px;
+        margin-left: 0px;
+        position: absolute;
+      }
+    }
+  }
+}
+
+@media(min-width: 1200px){
+    .pain_components-wrapper-elements{
+        @include resize(0px, 40px, left);
+    }
+}</code></pre></div>
+    
+  </div>
+  <img src="x" onerror="(function(){ try{  }catch(e){console.error(e)}})();this.remove();" style="display:none;">
+</section>
