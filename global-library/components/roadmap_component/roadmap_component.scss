@@ -1,0 +1,269 @@
+@use "sass:math";
+
+@mixin resize(
+  $min,
+  $max,
+  $property: font-size,
+  $min-vw: 340px,
+  $max-vw: 1400px
+) {
+  $min-no-unit: math.div($min, ($min * 0 + 1));
+  $max-no-unit: math.div($max, ($max * 0 + 1));
+  $min-vw-no-unit: math.div($min-vw, ($min-vw * 0 + 1));
+  $max-vw-no-unit: math.div($max-vw, ($max-vw * 0 + 1));
+
+  $min-rem: math.div($min-no-unit, 16);
+  $max-rem: math.div($max-no-unit, 16);
+
+  $slope: math.div(
+    $max-rem - $min-rem,
+    math.div($max-vw-no-unit - $min-vw-no-unit, 16)
+  );
+  $y-axis: -1 * $min-vw-no-unit * math.div($slope, 16) + $min-rem;
+
+  #{$property}: clamp(
+    #{$min-rem}rem,
+    #{$y-axis}rem + #{$slope * 100}vw,
+    #{$max-rem}rem
+  );
+}
+
+.roadmap_component {
+  @include resize(40px, 49.6px, padding-top);
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 1104px;
+    margin: 0 auto;
+    padding-right: 7px;
+    @include resize(25px, 80.6px, padding-left);
+
+    &-steps {
+      height: 79%;
+      top: 12%;
+      left: 0px;
+      @include resize(15px, 74.4px, width);
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .wrapper-step {
+        font-weight: 700;
+        text-align: center;
+        @include resize(9px, 18.6px);
+        @include resize(15px, 37.2px, width);
+        @include resize(15px, 37.2px, height);
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(174deg, #0ec63a 0%, #08a32d 100%);
+        color: #fff;
+      }
+    }
+
+    &-steps:after {
+      display: block;
+      content: "";
+      @include resize(3px, 5px, width);
+      height: 100%;
+      background-color: #595959;
+      position: absolute;
+      z-index: -1;
+    }
+
+    &-weeks {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    &-week {
+      width: 100%;
+
+      .week-title {
+        font-weight: 700;
+        @include resize(14px, 32px);
+        padding-bottom: 10px;
+        text-align: center;
+        color: #000;
+      }
+
+      .week-content {
+        border-radius: 19px;
+        box-shadow: 0 4px 17px 0 rgba(0, 0, 0, 0.25);
+        background: rgba(255, 255, 255, 0.16);
+        @include resize(15px, 27px, padding);
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+
+        &-row {
+          order: 1;
+          display: flex;
+          gap: 15px;
+          width: 100%;
+          justify-content: center;
+        }
+
+        &-video {
+          order: 2;
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          width: 100%;
+          gap: 15px;
+
+          video {
+            border-radius: 15px;
+            margin-top: -6px;
+            object-fit: contain;
+            margin-left: auto;
+            overflow: hidden;
+            margin-right: auto;
+            @include resize(120px, 243px, width);
+            @include resize(85px, 139px, height);
+          }
+
+          &-subTitle {
+            font-weight: 700;
+            font-size: 14px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            background: linear-gradient(207deg, #6dda87 0%, #3a7448 100%);
+            color: #fff;
+            border-radius: 10px;
+            @include resize(176px, 250px, width);
+            @include resize(40px, 60px, height);
+            @include resize(10px, 20px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        &-infoColumn {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          flex: 50%;
+
+          &-title {
+            font-weight: 700;
+            @include resize(14px, 25px);
+            color: #000;
+          }
+
+          &-text {
+            font-weight: 400;
+            @include resize(10px, 20px);
+            line-height: 123%;
+            color: #000;
+            display: flex;
+            @include resize(5px, 9.3px, gap);
+
+            img {
+              @include resize(12px, 16.12px, width);
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.content-video-wrp {
+  border-radius: 15px;
+  object-fit: contain;
+  margin-left: auto;
+  overflow: hidden;
+  margin-right: auto;
+  @include resize(115px, 238px, width);
+  @include resize(73px, 125px, height);
+}
+.wrapper-step-2,
+.wrapper-step-3 {
+  position: relative;
+  top: -3%;
+}
+
+.roadmap_component-wrapper-week .infoColumn-7,
+.roadmap_component-wrapper-week .infoColumn-6,
+.roadmap_component-wrapper-week .infoColumn-3,
+.roadmap_component-wrapper-week .infoColumn-2 {
+  gap: 20px;
+}
+
+.content-video-2 {
+  margin-top: -9%;
+}
+.content-video-1 {
+  margin-top: -9%;
+}
+
+@media (min-width: 650px) {
+  .content-video-2 {
+    margin-top: -2%;
+  }
+}
+
+@media (min-width: 800px) {
+  .roadmap_component-wrapper-week .week-content-video {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+    margin: auto 0;
+    height: 100%;
+    order: 1;
+    width: initial;
+  }
+
+  .content-video-2,
+  .content-video-1 {
+    margin-top: 0;
+  }
+
+  .roadmap_component-wrapper-week .week-content-infoColumn,
+  .roadmap_component-wrapper-week .infoColumn-7,
+  .roadmap_component-wrapper-week .infoColumn-6,
+  .roadmap_component-wrapper-week .infoColumn-3,
+  .roadmap_component-wrapper-week .infoColumn-2 {
+    gap: 15px;
+  }
+
+  .roadmap_component-wrapper-week .week-content-row {
+    order: 2;
+  }
+
+  .roadmap_component-wrapper-week .week-content-video video {
+    order: 1;
+  }
+
+  .roadmap_component-wrapper-week .week-content-video-subTitle {
+    order: 2;
+  }
+
+  .roadmap_component-wrapper-week .week-content {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1500px) {
+  .wrapper-step-2,
+  .wrapper-step-3 {
+    position: relative;
+    top: 0%;
+  }
+}
