@@ -1,0 +1,389 @@
+<section class="component-card" id="card-swiper_slider" data-name="swiper_slider">
+  <style>@charset "UTF-8";
+.swiper_slider {
+  max-width: 100%;
+  position: relative;
+}
+.swiper_slider .swiper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.swiper_slider .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  height: clamp(22.5rem, 17.827724359rem + 21.9871794872vw, 43.9375rem);
+  margin: 0 5px !important;
+  width: 100%;
+  padding-top: 20px;
+  object-fit: contain;
+  min-width: 0; /* критично */
+}
+.swiper_slider {
+  /* стрілки */
+}
+.swiper_slider .swiper-buttons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 5px;
+}
+.swiper_slider .swiper-button-prev,
+.swiper_slider .swiper-button-next {
+  color: #000;
+  position: relative;
+  border-radius: 150px;
+  top: 0;
+  width: 115px;
+  height: 51px;
+  width: clamp(7.1875rem, 6.3565705128rem + 3.9102564103vw, 11rem);
+  height: clamp(3.1875rem, 2.5881410256rem + 2.8205128205vw, 5.9375rem);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper_slider .swiper-button-prev {
+  box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.19);
+  background: rgba(255, 255, 255, 0.45);
+}
+.swiper_slider .swiper-button-prev:after {
+  background: url(./assets/images/slider-arrow-l.png);
+  font-size: 0;
+  background-size: 80%;
+  width: 54px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.swiper_slider .swiper-button-next {
+  backdrop-filter: blur(0px);
+  box-shadow: inset 0 4px 21px 0 #048923;
+  background: linear-gradient(174deg, #0ec63a 0%, #01711c 100%);
+}
+.swiper_slider .swiper-button-next:after {
+  background: url(./assets/images/slider-arrow-r.png);
+  font-size: 0;
+  background-size: 80%;
+  width: 54px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.swiper_slider .swiper-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 5px 0 5px;
+}
+.swiper_slider {
+  /* крапки */
+}
+.swiper_slider .swiper-pagination {
+  position: initial;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  max-width: 190px;
+}
+.swiper_slider .swiper-pagination-bullet {
+  background-color: transparent;
+  border: 1px solid #027b1e;
+  opacity: 1;
+  margin: 3px;
+  height: clamp(0.1875rem, 0.0104166667rem + 0.8333333333vw, 1rem);
+  width: clamp(0.1875rem, 0.0104166667rem + 0.8333333333vw, 1rem);
+  margin: clamp(0.1875rem, 0.0104166667rem + 0.8333333333vw, 1rem);
+}
+.swiper_slider .swiper-pagination-bullet-active {
+  border: 3px solid #01AB2A;
+  background-color: #00F03A;
+  height: clamp(0.3125rem, 0.1081730769rem + 0.9615384615vw, 1.25rem);
+  width: clamp(0.3125rem, 0.1081730769rem + 0.9615384615vw, 1.25rem);
+}</style>
+  <div class="component-header">
+    <h2>swiper_slider</h2>
+    <div class="component-controls">
+      <button class="btn-add" onclick="addToProject('swiper_slider')">➕ Add</button>
+      <button class="btn-del" onclick="deleteFullComponent('swiper_slider')">🗑 Delete</button>
+    </div>
+  </div>
+  <div class="tabs-nav">
+    <button class="tab-link active" onclick="openTab(event, 'swiper_slider', 'preview')">Preview</button>
+    <button class="tab-link" onclick="openTab(event, 'swiper_slider', 'html')">HTML</button>
+    <button class="tab-link" onclick="openTab(event, 'swiper_slider', 'scss')">SCSS</button>
+    <button class="tab-link" onclick="openTab(event, 'swiper_slider', 'js')">JS</button>
+  </div>
+  <div class="tabs-content">
+    <div id="tab-swiper_slider-preview" class="tab-panel active">
+      <div class="component-body">
+<div class="swiper_slider" data-component>
+    <h2 class="main-title">
+        <span>Testimonials </span>
+    </h2>
+  <div class="swiper main-slider">
+    <div class="swiper-wrapper">
+      <img loading="lazy" src="./assets/images/slider-sw-1.webp" class="swiper-slide" alt="swiper-slide">
+      <img loading="lazy" src="./assets/images/slider-sw-2.webp" class="swiper-slide" alt="swiper-slide">
+      <img loading="lazy" src="./assets/images/slider-sw-3.webp" class="swiper-slide" alt="swiper-slide">
+      <img loading="lazy" src="./assets/images/slider-sw-4.webp" class="swiper-slide" alt="swiper-slide">
+      <img loading="lazy" src="./assets/images/slider-sw-5.webp" class="swiper-slide" alt="swiper-slide">
+      <img loading="lazy" src="./assets/images/slider-sw-6.webp" class="swiper-slide" alt="swiper-slide">
+      <img loading="lazy" src="./assets/images/slider-sw-7.webp" class="swiper-slide" alt="swiper-slide">
+      <img loading="lazy" src="./assets/images/slider-sw-8.webp" class="swiper-slide" alt="swiper-slide">
+      <img loading="lazy" src="./assets/images/slider-sw-9.webp" class="swiper-slide" alt="swiper-slide">
+    </div>
+
+    <!-- крапки -->
+    <div class="swiper-bottom">
+        <div class="swiper-pagination"></div>
+
+        <!-- стрілки -->
+        <div class="swiper-buttons">
+            <button class="swiper-button-prev" aria-label="Previous slide"></button>
+            <button class="swiper-button-next" aria-label="Next slide"></button>
+        </div>
+    </div>
+  </div>
+</div></div>
+    </div>
+    <div id="tab-swiper_slider-html" class="tab-panel">
+      <pre><code>
+&lt;div class="swiper_slider" data-component&gt;
+    &lt;h2 class="main-title"&gt;
+        &lt;span&gt;Testimonials &lt;/span&gt;
+    &lt;/h2&gt;
+  &lt;div class="swiper main-slider"&gt;
+    &lt;div class="swiper-wrapper"&gt;
+      &lt;img loading="lazy" src="../../assets/images/slider-sw-1.webp" class="swiper-slide" alt="swiper-slide"&gt;
+      &lt;img loading="lazy" src="../../assets/images/slider-sw-2.webp" class="swiper-slide" alt="swiper-slide"&gt;
+      &lt;img loading="lazy" src="../../assets/images/slider-sw-3.webp" class="swiper-slide" alt="swiper-slide"&gt;
+      &lt;img loading="lazy" src="../../assets/images/slider-sw-4.webp" class="swiper-slide" alt="swiper-slide"&gt;
+      &lt;img loading="lazy" src="../../assets/images/slider-sw-5.webp" class="swiper-slide" alt="swiper-slide"&gt;
+      &lt;img loading="lazy" src="../../assets/images/slider-sw-6.webp" class="swiper-slide" alt="swiper-slide"&gt;
+      &lt;img loading="lazy" src="../../assets/images/slider-sw-7.webp" class="swiper-slide" alt="swiper-slide"&gt;
+      &lt;img loading="lazy" src="../../assets/images/slider-sw-8.webp" class="swiper-slide" alt="swiper-slide"&gt;
+      &lt;img loading="lazy" src="../../assets/images/slider-sw-9.webp" class="swiper-slide" alt="swiper-slide"&gt;
+    &lt;/div&gt;
+
+    &lt;!-- крапки --&gt;
+    &lt;div class="swiper-bottom"&gt;
+        &lt;div class="swiper-pagination"&gt;&lt;/div&gt;
+
+        &lt;!-- стрілки --&gt;
+        &lt;div class="swiper-buttons"&gt;
+            &lt;button class="swiper-button-prev" aria-label="Previous slide"&gt;&lt;/button&gt;
+            &lt;button class="swiper-button-next" aria-label="Next slide"&gt;&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    <div id="tab-swiper_slider-scss" class="tab-panel"><pre><code>@use "sass:math";
+
+@mixin resize($min, $max, $property: font-size, $min-vw: 340px, $max-vw: 1900px) {
+  // Видалення одиниць вимірювання
+  $min-no-unit: math.div($min, ($min * 0 + 1));
+  $max-no-unit: math.div($max, ($max * 0 + 1));
+  $min-vw-no-unit: math.div($min-vw, ($min-vw * 0 + 1));
+  $max-vw-no-unit: math.div($max-vw, ($max-vw * 0 + 1));
+
+  // Перетворення в REM
+  $min-rem: math.div($min-no-unit, 16);
+  $max-rem: math.div($max-no-unit, 16);
+  
+  // Розрахунок формули для плавної зміни
+  $slope: math.div($max-rem - $min-rem, math.div($max-vw-no-unit - $min-vw-no-unit, 16));
+  $y-axis: -1 * $min-vw-no-unit * math.div($slope, 16) + $min-rem;
+
+  // Динамічне ім'я властивості
+  #{$property}: clamp(
+    #{$min-rem}rem,
+    #{$y-axis}rem + #{ $slope * 100 }vw,
+    #{$max-rem}rem
+  );
+}
+
+
+.swiper_slider {
+  max-width: 100%;
+  position: relative;
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    @include resize(360px, 703px, height); 
+    margin: 0 5px !important;
+    width: 100%;
+    padding-top: 20px;
+    object-fit: contain;
+    min-width: 0; /* критично */
+  }
+
+  /* стрілки */
+
+  .swiper-buttons{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 5px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #000;
+    position: relative;
+    border-radius: 150px;
+    top: 0;
+    width: 115px;
+    height: 51px;
+    @include resize(115px, 176px, width); 
+    @include resize(51px, 95px, height); 
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .swiper-button-prev{
+    box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.19);
+background: rgba(255, 255, 255, 0.45);
+
+    &amp;:after{
+        background: url(../../assets/images/slider-arrow-l.png);
+        font-size: 0;
+    background-size: 80%;
+    width: 54px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+  }
+
+  .swiper-button-next{
+    backdrop-filter: blur(0px);
+box-shadow: inset 0 4px 21px 0 #048923;
+background: linear-gradient(174deg, #0ec63a 0%, #01711c 100%);
+
+    &amp;:after{
+        background: url(../../assets/images/slider-arrow-r.png);
+        font-size: 0;
+    background-size: 80%;
+    width: 54px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+  }
+
+  .swiper-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 5px 0 5px;
+  }
+  /* крапки */
+  .swiper-pagination{
+    position: initial;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    max-width: 190px;
+  }
+  .swiper-pagination-bullet {
+    background-color: transparent;
+    border: 1px solid #027b1e;
+    opacity: 1;
+    margin: 3px;
+    @include resize(3px, 16px, height); 
+    @include resize(3px, 16px, width); 
+    @include resize(3px, 16px, margin); 
+  }
+
+  .swiper-pagination-bullet-active {
+    border: 3px solid #01AB2A;
+    background-color: #00F03A;
+    @include resize(5px, 20px, height); 
+    @include resize(5px, 20px, width); 
+  }
+}
+</code></pre></div>
+    <div id="tab-swiper_slider-js" class="tab-panel"><pre><code>const slider = new Swiper('.main-slider', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    speed: 500,
+
+    loop: false, // стабільніше ніж true
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    breakpoints: {
+    550: {
+      slidesPerView: 3.5,
+    },
+    650: {
+      slidesPerView: 4,
+    },
+    750: {
+      slidesPerView: 4.5,
+    },
+    850: {
+      slidesPerView: 5,
+    },
+    950: {
+      slidesPerView: 5.5,
+    },
+    1050: {
+      slidesPerView: 6,
+    },
+    1150: {
+      slidesPerView: 6.5,
+    },
+    1250: {
+      slidesPerView: 7,
+    },
+  },
+
+    // антикрихкість
+    watchOverflow: true,
+    observer: true,
+    observeParents: true,
+    resizeObserver: true,
+
+    on: {
+    reachEnd: function () {
+      // плавний скролл назад на 0
+      setTimeout(() =&gt; {
+        this.slideTo(0, 0, false); // instant reset
+      }, 200);
+    },
+  },
+
+    // touch
+    grabCursor: true,
+    resistanceRatio: 0.6,
+  });
+</code></pre></div>
+  </div>
+  <img src="x" onerror="(function(){ try{ const slider = new Swiper('.main-slider', {     slidesPerView: 3,     spaceBetween: 20,     speed: 500,      loop: false, // стабільніше ніж true      navigation: {       nextEl: '.swiper-button-next',       prevEl: '.swiper-button-prev',     },      pagination: {       el: '.swiper-pagination',       clickable: true,     },      breakpoints: {     550: {       slidesPerView: 3.5,     },     650: {       slidesPerView: 4,     },     750: {       slidesPerView: 4.5,     },     850: {       slidesPerView: 5,     },     950: {       slidesPerView: 5.5,     },     1050: {       slidesPerView: 6,     },     1150: {       slidesPerView: 6.5,     },     1250: {       slidesPerView: 7,     },   },      // антикрихкість     watchOverflow: true,     observer: true,     observeParents: true,     resizeObserver: true,      on: {     reachEnd: function () {       // плавний скролл назад на 0       setTimeout(() => {         this.slideTo(0, 0, false); // instant reset       }, 200);     },   },      // touch     grabCursor: true,     resistanceRatio: 0.6,   }); }catch(e){console.error(e)}})();this.remove();" style="display:none;">
+</section>
