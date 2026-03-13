@@ -1,0 +1,401 @@
+<section class="component-card" id="card-bonus_green" data-name="bonus_green">
+  <style>.bonus_green {
+  background: linear-gradient(135deg, #9dd89d 0%, #d8e1d7 100%);
+  border-radius: 20px;
+  max-width: 1244px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 7px;
+}
+.bonus_green .bonus_green-content {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(133deg, #25a341 0%, #2acf51 36.83%, #218739 100%);
+}
+.bonus_green .bonus_green-content .bonus_green-content-underTitle {
+  font-weight: 700;
+  font-size: clamp(1.125rem, 0.7785326087rem + 1.6304347826vw, 2.25rem);
+  line-height: 150%;
+  padding-top: 10px;
+  font-family: "ActayWide-Bold";
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+.bonus_green .bonus_green-content .bonus_green-content-title {
+  font-weight: 700;
+  font-size: clamp(2.0625rem, 1.350317029rem + 3.3514492754vw, 4.375rem);
+  text-align: center;
+  font-family: "ActayWide-Bold";
+  line-height: 83%;
+  text-transform: uppercase;
+  color: #fff;
+}
+.bonus_green .bonus_green-content .bonus_green-content-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 10px;
+}
+.bonus_green .bonus_green-content .bonus_green-content-bottom .content-bottom-info {
+  padding-left: 5px;
+  margin-left: auto;
+}
+.bonus_green .bonus_green-content .bonus_green-content-bottom .content-bottom-info .content-bottom-info-title {
+  font-weight: 700;
+  font-size: clamp(0.75rem, 0.5190217391rem + 1.0869565217vw, 1.5rem);
+  line-height: 179%;
+  padding-top: 10px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.bonus_green .bonus_green-content .bonus_green-content-bottom .content-bottom-info .content-bottom-info-text {
+  font-weight: 500;
+  font-size: clamp(0.75rem, 0.5190217391rem + 1.0869565217vw, 1.5rem);
+  line-height: 129%;
+  color: #fff;
+}
+.bonus_green .bonus_green-content .bonus_green-content-bottom .content-bottom-info .content-bottom-info-posters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  margin-left: -5px;
+}
+.bonus_green .bonus_green-content .bonus_green-content-bottom .content-bottom-info .content-bottom-info-posters img {
+  width: clamp(4.375rem, 1.9112318841rem + 11.5942028986vw, 12.375rem);
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.43);
+  border: 1px solid #fff;
+}
+.bonus_green .bonus_green-content .bonus_green-content-bottom .bonus-img-mobile {
+  object-fit: contain;
+  margin-left: auto;
+  width: clamp(7.5rem, 3.4386322464rem + 19.1123188406vw, 20.6875rem);
+}
+.bonus_green .bonus_green-content .bonus_green-content-bottom .bonus-img-desctop {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .bonus_green .bonus_green-content {
+    position: relative;
+    padding: clamp(1.25rem, 1.1152626812rem + 0.634057971vw, 1.6875rem);
+  }
+  .bonus_green .bonus_green-content .bonus_green-content-bottom .content-bottom-info {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    padding-top: 20px;
+    margin-right: auto;
+    gap: 15px;
+  }
+  .bonus_green .bonus_green-content .bonus_green-content-bottom .content-bottom-info-wrp {
+    order: 2;
+  }
+  .bonus_green .bonus_green-content .bonus_green-content-bottom .content-bottom-info-wrp .content-bottom-info-title {
+    padding-top: 0;
+  }
+  .bonus_green .bonus_green-content .bonus_green-content-bottom .content-bottom-info-posters {
+    order: 1;
+  }
+  .bonus_green .bonus_green-content .bonus_green-content-bottom .content-bottom-info-posters img {
+    border-radius: 21px !important;
+  }
+  .bonus_green .bonus_green-content .bonus_green-content-bottom .bonus-img-mobile {
+    display: none;
+  }
+  .bonus_green .bonus_green-content .bonus_green-content-bottom .bonus-img-desctop {
+    display: block;
+    width: clamp(5rem, -0.5434782609rem + 26.0869565217vw, 23rem);
+    object-fit: contain;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .bonus_green .bonus_green-content::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 97px;
+    width: 150px;
+    box-shadow: 0 0 67px 57px #238B3C;
+    border-radius: 100%;
+  }
+}</style>
+  <div class="component-header">
+    <h2>bonus_green</h2>
+    <div class="component-controls">
+      <button class="btn-add" onclick="addToProject('bonus_green')">➕ Add</button>
+      <button class="btn-del" onclick="deleteFullComponent('bonus_green')">🗑 Delete</button>
+    </div>
+  </div>
+  <div class="tabs-nav">
+    <button class="tab-link active" onclick="openTab(event, 'bonus_green', 'preview')">Preview</button>
+    <button class="tab-link" onclick="openTab(event, 'bonus_green', 'html')">HTML</button>
+    <button class="tab-link" onclick="openTab(event, 'bonus_green', 'scss')">SCSS</button>
+    
+  </div>
+  <div class="tabs-content">
+    <div id="tab-bonus_green-preview" class="tab-panel active">
+      <div class="component-body"><div class="bonus_green component-gap" data-component>
+    <div class="bonus_green-content">
+        <h4 class="bonus_green-content-underTitle">
+            Buy Now and get 
+        </h4>
+        <h3 class="bonus_green-content-title">
+            Special bonus
+        </h3>
+        <div class="bonus_green-content-bottom">
+            <div class="content-bottom-info">
+                <div class="content-bottom-info-wrp">
+                    <h5 class="content-bottom-info-title">
+                        2 Back Mobility Sessions
+                    </h5>
+                    <p class="content-bottom-info-text">
+                        Unlock Your Upper Body
+                    </p>
+                </div>
+                <div class="content-bottom-info-posters">
+                    <img loading="lazy" src="./assets/images/bonus-poster-1.webp" alt="">
+                    <img loading="lazy" src="./assets/images/bonus-poster-2.webp" alt="">
+                </div>
+            </div>
+            <img loading="lazy" src="./assets/images/bonus-img-mobile.webp" class="bonus-img-mobile" alt="">
+            <img loading="lazy" src="./assets/images/bonus-img-desctop.webp" class="bonus-img-desctop" alt="">
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div id="tab-bonus_green-html" class="tab-panel">
+      <pre><code>&lt;div class="bonus_green component-gap" data-component&gt;
+    &lt;div class="bonus_green-content"&gt;
+        &lt;h4 class="bonus_green-content-underTitle"&gt;
+            Buy Now and get 
+        &lt;/h4&gt;
+        &lt;h3 class="bonus_green-content-title"&gt;
+            Special bonus
+        &lt;/h3&gt;
+        &lt;div class="bonus_green-content-bottom"&gt;
+            &lt;div class="content-bottom-info"&gt;
+                &lt;div class="content-bottom-info-wrp"&gt;
+                    &lt;h5 class="content-bottom-info-title"&gt;
+                        2 Back Mobility Sessions
+                    &lt;/h5&gt;
+                    &lt;p class="content-bottom-info-text"&gt;
+                        Unlock Your Upper Body
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="content-bottom-info-posters"&gt;
+                    &lt;img loading="lazy" src="../../assets/images/bonus-poster-1.webp" alt=""&gt;
+                    &lt;img loading="lazy" src="../../assets/images/bonus-poster-2.webp" alt=""&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;img loading="lazy" src="../../assets/images/bonus-img-mobile.webp" class="bonus-img-mobile" alt=""&gt;
+            &lt;img loading="lazy" src="../../assets/images/bonus-img-desctop.webp" class="bonus-img-desctop" alt=""&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    <div id="tab-bonus_green-scss" class="tab-panel"><pre><code>@use "sass:math";
+
+@mixin resize(
+  $min,
+  $max,
+  $property: font-size,
+  $min-vw: 340px,
+  $max-vw: 1444px
+) {
+  // Видалення одиниць вимірювання
+  $min-no-unit: math.div($min, ($min * 0 + 1));
+  $max-no-unit: math.div($max, ($max * 0 + 1));
+  $min-vw-no-unit: math.div($min-vw, ($min-vw * 0 + 1));
+  $max-vw-no-unit: math.div($max-vw, ($max-vw * 0 + 1));
+
+  // Перетворення в REM
+  $min-rem: math.div($min-no-unit, 16);
+  $max-rem: math.div($max-no-unit, 16);
+
+  // Розрахунок формули для плавної зміни
+  $slope: math.div(
+    $max-rem - $min-rem,
+    math.div($max-vw-no-unit - $min-vw-no-unit, 16)
+  );
+  $y-axis: -1 * $min-vw-no-unit * math.div($slope, 16) + $min-rem;
+
+  // Динамічне ім'я властивості
+  #{$property}: clamp(
+    #{$min-rem}rem,
+    #{$y-axis}rem + #{$slope * 100}vw,
+    #{$max-rem}rem
+  );
+}
+
+.bonus_green {
+  background: linear-gradient(135deg, #9dd89d 0%, #d8e1d7 100%);
+  border-radius: 20px;
+  max-width: 1244px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 7px;
+
+  .bonus_green-content {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(
+      133deg,
+      #25a341 0%,
+      #2acf51 36.83%,
+      #218739 100%
+    );
+
+    .bonus_green-content-underTitle {
+      font-weight: 700;
+      @include resize(18px, 36px);
+      line-height: 150%;
+      padding-top: 10px;
+      font-family: "ActayWide-Bold";
+      text-transform: uppercase;
+      text-align: center;
+      color: #fff;
+    }
+
+    .bonus_green-content-title {
+      font-weight: 700;
+      @include resize(33px, 70px);
+      text-align: center;
+      font-family: "ActayWide-Bold";
+      line-height: 83%;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .bonus_green-content-bottom {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 10px;
+      .content-bottom-info {
+        padding-left: 5px;
+        margin-left: auto;
+        .content-bottom-info-title {
+          font-weight: 700;
+          @include resize(12px, 24px);
+          line-height: 179%;
+          padding-top: 10px;
+          text-transform: uppercase;
+          color: #fff;
+        }
+
+        .content-bottom-info-text {
+          font-weight: 500;
+          @include resize(12px, 24px);
+          line-height: 129%;
+          color: #fff;
+        }
+
+        .content-bottom-info-posters {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 15px;
+          padding-top: 10px;
+          padding-bottom: 15px;
+          margin-left: -5px;
+
+          img {
+            @include resize(70px, 198px, width);
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.43);
+            border: 1px solid #fff;
+          }
+        }
+      }
+
+      .bonus-img-mobile {
+        object-fit: contain;
+        margin-left: auto;
+        @include resize(120px, 331px, width);
+      }
+
+      .bonus-img-desctop {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .bonus_green {
+    .bonus_green-content {
+      position: relative;
+      @include resize(20px, 27px, padding);
+      .bonus_green-content-bottom {
+        .content-bottom-info {
+          display: flex;
+          align-items: center;
+          margin-left: 30px;
+          padding-top: 20px;
+          margin-right: auto;
+          gap: 15px;
+
+          &amp;-wrp {
+            order: 2;
+
+            .content-bottom-info-title {
+              padding-top: 0;
+            }
+          }
+
+          &amp;-posters {
+            order: 1;
+
+            img{
+                border-radius: 21px !important;
+            }
+          }
+        }
+
+        .bonus-img-mobile {
+          display: none;
+        }
+
+        .bonus-img-desctop {
+          display: block;
+          @include resize(80px, 368px, width);
+          object-fit: contain;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+
+    .bonus_green-content::after{
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 97px;
+      width: 150px;
+      box-shadow: 0 0 67px 57px #238B3C;
+      border-radius: 100%;
+    }
+  }
+}
+</code></pre></div>
+    
+  </div>
+  <img src="x" onerror="(function(){ try{  }catch(e){console.error(e)}})();this.remove();" style="display:none;">
+</section>
