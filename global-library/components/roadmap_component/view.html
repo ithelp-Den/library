@@ -1,0 +1,988 @@
+<section class="component-card" id="card-roadmap_component" data-name="roadmap_component">
+  <style>.roadmap_component {
+  padding-top: clamp(2.5rem, 2.3075471698rem + 0.9056603774vw, 3.1rem);
+}
+.roadmap_component-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 1104px;
+  margin: 0 auto;
+  padding-right: 7px;
+  padding-left: clamp(1.5625rem, 0.4478773585rem + 5.2452830189vw, 5.0375rem);
+}
+.roadmap_component-wrapper-steps {
+  height: 79%;
+  top: 12%;
+  left: 0px;
+  width: clamp(0.9375rem, -0.2533018868rem + 5.6037735849vw, 4.65rem);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.roadmap_component-wrapper-steps .wrapper-step {
+  font-weight: 700;
+  text-align: center;
+  font-size: clamp(0.5625rem, 0.3700471698rem + 0.9056603774vw, 1.1625rem);
+  width: clamp(0.9375rem, 0.4924528302rem + 2.0943396226vw, 2.325rem);
+  height: clamp(0.9375rem, 0.4924528302rem + 2.0943396226vw, 2.325rem);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(174deg, #0ec63a 0%, #08a32d 100%);
+  color: #fff;
+}
+.roadmap_component-wrapper-steps:after {
+  display: block;
+  content: "";
+  width: clamp(0.1875rem, 0.1474056604rem + 0.1886792453vw, 0.3125rem);
+  height: 100%;
+  background-color: #595959;
+  position: absolute;
+  z-index: -1;
+}
+.roadmap_component-wrapper-weeks {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.roadmap_component-wrapper-week {
+  width: 100%;
+}
+.roadmap_component-wrapper-week .week-title {
+  font-weight: 700;
+  font-size: clamp(0.875rem, 0.5141509434rem + 1.6981132075vw, 2rem);
+  padding-bottom: 10px;
+  text-align: center;
+  color: #000;
+}
+.roadmap_component-wrapper-week .week-content {
+  border-radius: 19px;
+  box-shadow: 0 4px 17px 0 rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.16);
+  padding: clamp(0.9375rem, 0.6969339623rem + 1.1320754717vw, 1.6875rem);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+.roadmap_component-wrapper-week .week-content-row {
+  order: 1;
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  justify-content: center;
+}
+.roadmap_component-wrapper-week .week-content-video {
+  order: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  gap: 15px;
+}
+.roadmap_component-wrapper-week .week-content-video video {
+  border-radius: 15px;
+  margin-top: -6px;
+  object-fit: contain;
+  margin-left: auto;
+  overflow: hidden;
+  margin-right: auto;
+  width: clamp(7.5rem, 5.0341981132rem + 11.6037735849vw, 15.1875rem);
+  height: clamp(5.3125rem, 4.2299528302rem + 5.0943396226vw, 8.6875rem);
+}
+.roadmap_component-wrapper-week .week-content-video-subTitle {
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(207deg, #6dda87 0%, #3a7448 100%);
+  color: #fff;
+  border-radius: 10px;
+  width: clamp(11rem, 9.516509434rem + 6.9811320755vw, 15.625rem);
+  height: clamp(2.5rem, 2.0990566038rem + 1.8867924528vw, 3.75rem);
+  font-size: clamp(0.625rem, 0.4245283019rem + 0.9433962264vw, 1.25rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.roadmap_component-wrapper-week .week-content-infoColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 50%;
+}
+.roadmap_component-wrapper-week .week-content-infoColumn-title {
+  font-weight: 700;
+  font-size: clamp(0.875rem, 0.6544811321rem + 1.0377358491vw, 1.5625rem);
+  color: #000;
+}
+.roadmap_component-wrapper-week .week-content-infoColumn-text {
+  font-weight: 400;
+  font-size: clamp(0.625rem, 0.4245283019rem + 0.9433962264vw, 1.25rem);
+  line-height: 123%;
+  color: #000;
+  display: flex;
+  gap: clamp(0.3125rem, 0.2262971698rem + 0.4056603774vw, 0.58125rem);
+}
+.roadmap_component-wrapper-week .week-content-infoColumn-text img {
+  width: clamp(0.75rem, 0.6674056604rem + 0.3886792453vw, 1.0075rem);
+  object-fit: contain;
+}
+
+.content-video-wrp {
+  border-radius: 15px;
+  object-fit: contain;
+  margin-left: auto;
+  overflow: hidden;
+  margin-right: auto;
+  width: clamp(7.1875rem, 4.7216981132rem + 11.6037735849vw, 14.875rem);
+  height: clamp(4.5625rem, 3.5200471698rem + 4.9056603774vw, 7.8125rem);
+}
+
+.wrapper-step-2,
+.wrapper-step-3 {
+  position: relative;
+  top: -3%;
+}
+
+.roadmap_component-wrapper-week .infoColumn-7,
+.roadmap_component-wrapper-week .infoColumn-6,
+.roadmap_component-wrapper-week .infoColumn-3,
+.roadmap_component-wrapper-week .infoColumn-2 {
+  gap: 20px;
+}
+
+.content-video-2 {
+  margin-top: -9%;
+}
+
+.content-video-1 {
+  margin-top: -9%;
+}
+
+@media (min-width: 650px) {
+  .content-video-2 {
+    margin-top: -2%;
+  }
+}
+@media (min-width: 800px) {
+  .roadmap_component-wrapper-week .week-content-video {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+    margin: auto 0;
+    height: 100%;
+    order: 1;
+    width: initial;
+  }
+  .content-video-2,
+  .content-video-1 {
+    margin-top: 0;
+  }
+  .roadmap_component-wrapper-week .week-content-infoColumn,
+  .roadmap_component-wrapper-week .infoColumn-7,
+  .roadmap_component-wrapper-week .infoColumn-6,
+  .roadmap_component-wrapper-week .infoColumn-3,
+  .roadmap_component-wrapper-week .infoColumn-2 {
+    gap: 15px;
+  }
+  .roadmap_component-wrapper-week .week-content-row {
+    order: 2;
+  }
+  .roadmap_component-wrapper-week .week-content-video video {
+    order: 1;
+  }
+  .roadmap_component-wrapper-week .week-content-video-subTitle {
+    order: 2;
+  }
+  .roadmap_component-wrapper-week .week-content {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1500px) {
+  .wrapper-step-2,
+  .wrapper-step-3 {
+    position: relative;
+    top: 0%;
+  }
+}</style>
+  <div class="component-header">
+    <h2>roadmap_component</h2>
+    <div class="component-controls">
+      <button class="btn-add" onclick="addToProject('roadmap_component')">➕ Add</button>
+      <button class="btn-del" onclick="deleteFullComponent('roadmap_component')">🗑 Delete</button>
+    </div>
+  </div>
+  <div class="tabs-nav">
+    <button class="tab-link active" onclick="openTab(event, 'roadmap_component', 'preview')">Preview</button>
+    <button class="tab-link" onclick="openTab(event, 'roadmap_component', 'html')">HTML</button>
+    <button class="tab-link" onclick="openTab(event, 'roadmap_component', 'scss')">SCSS</button>
+    
+  </div>
+  <div class="tabs-content">
+    <div id="tab-roadmap_component-preview" class="tab-panel active">
+      <div class="component-body"><div class="roadmap_component" data-component>
+    <h2 class="main-title">
+        course detailed
+        <br>
+        <span>
+            roadmap
+        </span>
+    </h2>
+    <div class="roadmap_component-wrapper">
+        <div class="roadmap_component-wrapper-steps">
+            <div class="wrapper-step">
+                01
+            </div>
+            <div class="wrapper-step wrapper-step-2">
+                02
+            </div>
+            <div class="wrapper-step wrapper-step-3">
+                03
+            </div>
+            <div class="wrapper-step">
+                04
+            </div>
+        </div>
+        <div class="roadmap_component-wrapper-weeks">
+            <div class="roadmap_component-wrapper-week">
+                <h3 class="week-title">
+                    WEEKS 1-3: Foundation. Build Your Base
+                </h3>
+                <div class="week-content">
+                    <div class="week-content-video content-video-1">
+                        <div class="content-video-wrp">
+                        <video src="./assets/video/v-1.mp4" preload="metadata" autoplay playsinline muted></video>
+                        </div>
+                        <p class="week-content-video-subTitle">
+                            Time: 15-20 min/session<br>3-4 session/week
+                        </p>
+                    </div>
+                    <div class="week-content-row">
+                    <div class="week-content-infoColumn infoColumn-1">
+                        <h4 class="week-content-infoColumn-title">
+                            What You'll Feel:
+                        </h4>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Less stiffness after long day
+                        </p>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Standing up feels lighter
+                        </p>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Learn proper breathing & positioning
+                        </p>
+                    </div>
+                    <div class="week-content-infoColumn infoColumn-2">
+                        <h4 class="week-content-infoColumn-title">
+                            Focus Areas:
+                        </h4>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Hip flexor release
+                        </p>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Basic external rotation
+                        </p>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Gentle adductor opening
+                        </p>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Psoas decompression
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="roadmap_component-wrapper-week">
+                <h3 class="week-title">
+                    WEEKS 4-7: Progression. Active ranges 
+                </h3>
+                <div class="week-content">
+                    <div class="week-content-video content-video-2">
+                        <p class="week-content-video-subTitle">
+                            Time: 15-20 min/session<br>3-4 session/week
+                        </p>
+                        <div class="content-video-wrp">
+                        <video src="./assets/video/v-2.mp4" preload="metadata" autoplay playsinline muted ></video>
+                        </div>
+                    </div>
+                    <div class="week-content-row">
+                    <div class="week-content-infoColumn infoColumn-3">
+                        <h4 class="week-content-infoColumn-title">
+                            What You'll Feel:
+                        </h4>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Squats getting noticeably deeper
+                        </p>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Can sit cross-legged without pain
+                        </p>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Hip circles feel smooth and easy
+                        </p>
+                    </div>
+                    <div class="week-content-infoColumn infoColumn-4">
+                        <h4 class="week-content-infoColumn-title">
+                            Focus Areas:
+                        </h4>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Internal rotation work
+                        </p>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Deep hip openers
+                        </p>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Movement control in new range
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="roadmap_component-wrapper-week">
+                <h3 class="week-title">
+                    WEEKS 8-10:  Mobilize & Advance
+                </h3>
+                <div class="week-content">
+                    <div class="week-content-video content-video-3">
+                        <div class="content-video-wrp">
+                        <video src="./assets/video/v-3.mp4" preload="metadata" autoplay playsinline muted></video>
+                        </div>
+                        <p class="week-content-video-subTitle">
+                            Sessions: 20-25 min,<br>3-4x/week
+                        </p>
+                    </div>
+                    <div class="week-content-row">
+                    <div class="week-content-infoColumn infoColumn-5">
+                        <h4 class="week-content-infoColumn-title">
+                            What You'll Feel: 
+                        </h4>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Movements feel natural again
+                        </p>
+                         <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Lower back pain significantly reduced
+                        </p>
+                         <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Increased range of motion
+                        </p>
+                    </div>
+                    <div class="week-content-infoColumn infoColumn-6">
+                        <h4 class="week-content-infoColumn-title">
+                            Focus Areas:
+                        </h4>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Resch Split prep & progressions
+                        </p>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Hamstring & adductor focus
+                        </p>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Full hip opening sequences
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="roadmap_component-wrapper-week">
+                <h3 class="week-title">
+                    WEEKS 11-13 Mastery. Advanced — Upgrade Your Range
+                </h3>
+                <div class="week-content">
+                    <div class="week-content-video content-video-4">
+                        <p class="week-content-video-subTitle">
+                            Sessions: 20-25 min,<br>3-4x/week
+                        </p>
+                        <div class="content-video-wrp">
+                        <video src="./assets/video/v-4.mp4" preload="metadata" autoplay playsinline muted></video>
+                        </div>
+                    </div>
+                    <div class="week-content-row">
+                    <div class="week-content-infoColumn infoColumn-7">
+                        <h4 class="week-content-infoColumn-title">
+                            What You'll Feel: 
+                        </h4>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Move with power AND flexibility
+                        </p>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Progress in amplitude & control
+                        </p>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Complete hip freedom in all directions
+                        </p>
+                    </div>
+                    <div class="week-content-infoColumn infoColumn-8">
+                        <h4 class="week-content-infoColumn-title">
+                            Focus Areas:
+                        </h4>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Splits progressions
+                        </p>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Advanced active flexibility
+                        </p>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Strength in end ranges
+                        </p>
+                        <p class="week-content-infoColumn-text">
+                            <img loading="lazy" src="./assets/images/check.png" alt="">
+                            Full movement integration
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+    </div>
+    <div id="tab-roadmap_component-html" class="tab-panel">
+      <pre><code>&lt;div class="roadmap_component" data-component&gt;
+    &lt;h2 class="main-title"&gt;
+        course detailed
+        &lt;br&gt;
+        &lt;span&gt;
+            roadmap
+        &lt;/span&gt;
+    &lt;/h2&gt;
+    &lt;div class="roadmap_component-wrapper"&gt;
+        &lt;div class="roadmap_component-wrapper-steps"&gt;
+            &lt;div class="wrapper-step"&gt;
+                01
+            &lt;/div&gt;
+            &lt;div class="wrapper-step wrapper-step-2"&gt;
+                02
+            &lt;/div&gt;
+            &lt;div class="wrapper-step wrapper-step-3"&gt;
+                03
+            &lt;/div&gt;
+            &lt;div class="wrapper-step"&gt;
+                04
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="roadmap_component-wrapper-weeks"&gt;
+            &lt;div class="roadmap_component-wrapper-week"&gt;
+                &lt;h3 class="week-title"&gt;
+                    WEEKS 1-3: Foundation. Build Your Base
+                &lt;/h3&gt;
+                &lt;div class="week-content"&gt;
+                    &lt;div class="week-content-video content-video-1"&gt;
+                        &lt;div class="content-video-wrp"&gt;
+                        &lt;video src="../../assets/video/v-1.mp4" preload="metadata" autoplay playsinline muted&gt;&lt;/video&gt;
+                        &lt;/div&gt;
+                        &lt;p class="week-content-video-subTitle"&gt;
+                            Time: 15-20 min/session&lt;br&gt;3-4 session/week
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="week-content-row"&gt;
+                    &lt;div class="week-content-infoColumn infoColumn-1"&gt;
+                        &lt;h4 class="week-content-infoColumn-title"&gt;
+                            What You'll Feel:
+                        &lt;/h4&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Less stiffness after long day
+                        &lt;/p&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Standing up feels lighter
+                        &lt;/p&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Learn proper breathing &amp; positioning
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="week-content-infoColumn infoColumn-2"&gt;
+                        &lt;h4 class="week-content-infoColumn-title"&gt;
+                            Focus Areas:
+                        &lt;/h4&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Hip flexor release
+                        &lt;/p&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Basic external rotation
+                        &lt;/p&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Gentle adductor opening
+                        &lt;/p&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Psoas decompression
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="roadmap_component-wrapper-week"&gt;
+                &lt;h3 class="week-title"&gt;
+                    WEEKS 4-7: Progression. Active ranges 
+                &lt;/h3&gt;
+                &lt;div class="week-content"&gt;
+                    &lt;div class="week-content-video content-video-2"&gt;
+                        &lt;p class="week-content-video-subTitle"&gt;
+                            Time: 15-20 min/session&lt;br&gt;3-4 session/week
+                        &lt;/p&gt;
+                        &lt;div class="content-video-wrp"&gt;
+                        &lt;video src="../../assets/video/v-2.mp4" preload="metadata" autoplay playsinline muted &gt;&lt;/video&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="week-content-row"&gt;
+                    &lt;div class="week-content-infoColumn infoColumn-3"&gt;
+                        &lt;h4 class="week-content-infoColumn-title"&gt;
+                            What You'll Feel:
+                        &lt;/h4&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Squats getting noticeably deeper
+                        &lt;/p&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Can sit cross-legged without pain
+                        &lt;/p&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Hip circles feel smooth and easy
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="week-content-infoColumn infoColumn-4"&gt;
+                        &lt;h4 class="week-content-infoColumn-title"&gt;
+                            Focus Areas:
+                        &lt;/h4&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Internal rotation work
+                        &lt;/p&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Deep hip openers
+                        &lt;/p&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Movement control in new range
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="roadmap_component-wrapper-week"&gt;
+                &lt;h3 class="week-title"&gt;
+                    WEEKS 8-10:  Mobilize &amp; Advance
+                &lt;/h3&gt;
+                &lt;div class="week-content"&gt;
+                    &lt;div class="week-content-video content-video-3"&gt;
+                        &lt;div class="content-video-wrp"&gt;
+                        &lt;video src="../../assets/video/v-3.mp4" preload="metadata" autoplay playsinline muted&gt;&lt;/video&gt;
+                        &lt;/div&gt;
+                        &lt;p class="week-content-video-subTitle"&gt;
+                            Sessions: 20-25 min,&lt;br&gt;3-4x/week
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="week-content-row"&gt;
+                    &lt;div class="week-content-infoColumn infoColumn-5"&gt;
+                        &lt;h4 class="week-content-infoColumn-title"&gt;
+                            What You'll Feel: 
+                        &lt;/h4&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Movements feel natural again
+                        &lt;/p&gt;
+                         &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Lower back pain significantly reduced
+                        &lt;/p&gt;
+                         &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Increased range of motion
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="week-content-infoColumn infoColumn-6"&gt;
+                        &lt;h4 class="week-content-infoColumn-title"&gt;
+                            Focus Areas:
+                        &lt;/h4&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Resch Split prep &amp; progressions
+                        &lt;/p&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Hamstring &amp; adductor focus
+                        &lt;/p&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Full hip opening sequences
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="roadmap_component-wrapper-week"&gt;
+                &lt;h3 class="week-title"&gt;
+                    WEEKS 11-13 Mastery. Advanced — Upgrade Your Range
+                &lt;/h3&gt;
+                &lt;div class="week-content"&gt;
+                    &lt;div class="week-content-video content-video-4"&gt;
+                        &lt;p class="week-content-video-subTitle"&gt;
+                            Sessions: 20-25 min,&lt;br&gt;3-4x/week
+                        &lt;/p&gt;
+                        &lt;div class="content-video-wrp"&gt;
+                        &lt;video src="../../assets/video/v-4.mp4" preload="metadata" autoplay playsinline muted&gt;&lt;/video&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="week-content-row"&gt;
+                    &lt;div class="week-content-infoColumn infoColumn-7"&gt;
+                        &lt;h4 class="week-content-infoColumn-title"&gt;
+                            What You'll Feel: 
+                        &lt;/h4&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Move with power AND flexibility
+                        &lt;/p&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Progress in amplitude &amp; control
+                        &lt;/p&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Complete hip freedom in all directions
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="week-content-infoColumn infoColumn-8"&gt;
+                        &lt;h4 class="week-content-infoColumn-title"&gt;
+                            Focus Areas:
+                        &lt;/h4&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Splits progressions
+                        &lt;/p&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Advanced active flexibility
+                        &lt;/p&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Strength in end ranges
+                        &lt;/p&gt;
+                        &lt;p class="week-content-infoColumn-text"&gt;
+                            &lt;img loading="lazy" src="../../assets/images/check.png" alt=""&gt;
+                            Full movement integration
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    <div id="tab-roadmap_component-scss" class="tab-panel"><pre><code>@use "sass:math";
+
+@mixin resize(
+  $min,
+  $max,
+  $property: font-size,
+  $min-vw: 340px,
+  $max-vw: 1400px
+) {
+  $min-no-unit: math.div($min, ($min * 0 + 1));
+  $max-no-unit: math.div($max, ($max * 0 + 1));
+  $min-vw-no-unit: math.div($min-vw, ($min-vw * 0 + 1));
+  $max-vw-no-unit: math.div($max-vw, ($max-vw * 0 + 1));
+
+  $min-rem: math.div($min-no-unit, 16);
+  $max-rem: math.div($max-no-unit, 16);
+
+  $slope: math.div(
+    $max-rem - $min-rem,
+    math.div($max-vw-no-unit - $min-vw-no-unit, 16)
+  );
+  $y-axis: -1 * $min-vw-no-unit * math.div($slope, 16) + $min-rem;
+
+  #{$property}: clamp(
+    #{$min-rem}rem,
+    #{$y-axis}rem + #{$slope * 100}vw,
+    #{$max-rem}rem
+  );
+}
+
+.roadmap_component {
+  @include resize(40px, 49.6px, padding-top);
+
+  &amp;-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 1104px;
+    margin: 0 auto;
+    padding-right: 7px;
+    @include resize(25px, 80.6px, padding-left);
+
+    &amp;-steps {
+      height: 79%;
+      top: 12%;
+      left: 0px;
+      @include resize(15px, 74.4px, width);
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .wrapper-step {
+        font-weight: 700;
+        text-align: center;
+        @include resize(9px, 18.6px);
+        @include resize(15px, 37.2px, width);
+        @include resize(15px, 37.2px, height);
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(174deg, #0ec63a 0%, #08a32d 100%);
+        color: #fff;
+      }
+    }
+
+    &amp;-steps:after {
+      display: block;
+      content: "";
+      @include resize(3px, 5px, width);
+      height: 100%;
+      background-color: #595959;
+      position: absolute;
+      z-index: -1;
+    }
+
+    &amp;-weeks {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    &amp;-week {
+      width: 100%;
+
+      .week-title {
+        font-weight: 700;
+        @include resize(14px, 32px);
+        padding-bottom: 10px;
+        text-align: center;
+        color: #000;
+      }
+
+      .week-content {
+        border-radius: 19px;
+        box-shadow: 0 4px 17px 0 rgba(0, 0, 0, 0.25);
+        background: rgba(255, 255, 255, 0.16);
+        @include resize(15px, 27px, padding);
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+
+        &amp;-row {
+          order: 1;
+          display: flex;
+          gap: 15px;
+          width: 100%;
+          justify-content: center;
+        }
+
+        &amp;-video {
+          order: 2;
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          width: 100%;
+          gap: 15px;
+
+          video {
+            border-radius: 15px;
+            margin-top: -6px;
+            object-fit: contain;
+            margin-left: auto;
+            overflow: hidden;
+            margin-right: auto;
+            @include resize(120px, 243px, width);
+            @include resize(85px, 139px, height);
+          }
+
+          &amp;-subTitle {
+            font-weight: 700;
+            font-size: 14px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            background: linear-gradient(207deg, #6dda87 0%, #3a7448 100%);
+            color: #fff;
+            border-radius: 10px;
+            @include resize(176px, 250px, width);
+            @include resize(40px, 60px, height);
+            @include resize(10px, 20px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        &amp;-infoColumn {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          flex: 50%;
+
+          &amp;-title {
+            font-weight: 700;
+            @include resize(14px, 25px);
+            color: #000;
+          }
+
+          &amp;-text {
+            font-weight: 400;
+            @include resize(10px, 20px);
+            line-height: 123%;
+            color: #000;
+            display: flex;
+            @include resize(5px, 9.3px, gap);
+
+            img {
+              @include resize(12px, 16.12px, width);
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.content-video-wrp {
+  border-radius: 15px;
+  object-fit: contain;
+  margin-left: auto;
+  overflow: hidden;
+  margin-right: auto;
+  @include resize(115px, 238px, width);
+  @include resize(73px, 125px, height);
+}
+.wrapper-step-2,
+.wrapper-step-3 {
+  position: relative;
+  top: -3%;
+}
+
+.roadmap_component-wrapper-week .infoColumn-7,
+.roadmap_component-wrapper-week .infoColumn-6,
+.roadmap_component-wrapper-week .infoColumn-3,
+.roadmap_component-wrapper-week .infoColumn-2 {
+  gap: 20px;
+}
+
+.content-video-2 {
+  margin-top: -9%;
+}
+.content-video-1 {
+  margin-top: -9%;
+}
+
+@media (min-width: 650px) {
+  .content-video-2 {
+    margin-top: -2%;
+  }
+}
+
+@media (min-width: 800px) {
+  .roadmap_component-wrapper-week .week-content-video {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+    margin: auto 0;
+    height: 100%;
+    order: 1;
+    width: initial;
+  }
+
+  .content-video-2,
+  .content-video-1 {
+    margin-top: 0;
+  }
+
+  .roadmap_component-wrapper-week .week-content-infoColumn,
+  .roadmap_component-wrapper-week .infoColumn-7,
+  .roadmap_component-wrapper-week .infoColumn-6,
+  .roadmap_component-wrapper-week .infoColumn-3,
+  .roadmap_component-wrapper-week .infoColumn-2 {
+    gap: 15px;
+  }
+
+  .roadmap_component-wrapper-week .week-content-row {
+    order: 2;
+  }
+
+  .roadmap_component-wrapper-week .week-content-video video {
+    order: 1;
+  }
+
+  .roadmap_component-wrapper-week .week-content-video-subTitle {
+    order: 2;
+  }
+
+  .roadmap_component-wrapper-week .week-content {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1500px) {
+  .wrapper-step-2,
+  .wrapper-step-3 {
+    position: relative;
+    top: 0%;
+  }
+}
+</code></pre></div>
+    
+  </div>
+  <img src="x" onerror="(function(){ try{  }catch(e){console.error(e)}})();this.remove();" style="display:none;">
+</section>
