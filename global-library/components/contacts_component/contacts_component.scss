@@ -1,0 +1,121 @@
+@use "sass:math";
+
+@mixin resize(
+  $min,
+  $max,
+  $property: font-size,
+  $min-vw: 340px,
+  $max-vw: 1444px
+) {
+  $min-no-unit: math.div($min, ($min * 0 + 1));
+  $max-no-unit: math.div($max, ($max * 0 + 1));
+  $min-vw-no-unit: math.div($min-vw, ($min-vw * 0 + 1));
+  $max-vw-no-unit: math.div($max-vw, ($max-vw * 0 + 1));
+
+  $min-rem: math.div($min-no-unit, 16);
+  $max-rem: math.div($max-no-unit, 16);
+
+  $slope: math.div(
+    $max-rem - $min-rem,
+    math.div($max-vw-no-unit - $min-vw-no-unit, 16)
+  );
+  $y-axis: -1 * $min-vw-no-unit * math.div($slope, 16) + $min-rem;
+
+  #{$property}: clamp(
+    #{$min-rem}rem,
+    #{$y-axis}rem + #{$slope * 100}vw,
+    #{$max-rem}rem
+  );
+}
+
+.contacts {
+    background: #1b1b1b;
+    border-radius: 25px;
+    max-width: 1244px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.contacts-title {
+    font-weight: 600;
+    @include resize(64px, 80px);
+    line-height: 80%;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "ActayWide-Bold";
+    color: #fff;
+    text-shadow: 0 22px 17px rgba(0, 0, 0, 0.6);
+}
+
+.contacts-title span {
+    color: #01AB2A;
+}
+
+.contacts-subTitle {
+    font-weight: 600;
+    @include resize(16px, 24px);
+    line-height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    color: #fff;
+}
+
+.contacts-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    width: 100%;
+    max-width: 310px;
+    @include resize(310px, 600px, max-width);
+    margin: 0 auto;
+}
+
+.contacts-nav a {
+    font-weight: 400;
+    @include resize(14px, 20px);
+    line-height: 143%;
+    gap: 3px;
+    @include resize(14px, 20px, padding);
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.support_link {
+    text-align: center;
+    color: #cacaca;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.contacts-nav a img {
+    @include resize(25px, 55px, width);
+    @include resize(25px, 55px, height);
+    object-fit: contain;
+    margin-right: 5px;
+}
+
+.suport {
+    font-weight: 400;
+    @include resize(14px, 20px);
+    line-height: 167%;
+    color: #cacaca;
+    text-align: center;
+}
+
+.privacy {
+    font-weight: 400;
+    padding-top: 15px;
+    @include resize(14px, 20px);
+    line-height: 179%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-align: center;
+    color: #cacaca;
+}
