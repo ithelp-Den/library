@@ -1,0 +1,414 @@
+<section class="component-card" id="card-inside_component" data-name="inside_component">
+  <style>.inside_components {
+  position: relative;
+  max-width: 1244px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.inside_components-wrapper-img {
+  min-width: 120%;
+  max-height: clamp(31.25rem, 23.5507246377rem + 36.231884058vw, 56.25rem);
+  -o-object-fit: contain;
+  object-fit: contain;
+  position: absolute;
+  object-position: right;
+  right: -13%;
+  bottom: 0;
+  z-index: -1;
+}
+.inside_components-wrapper-elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(0.625rem, 0.2785326087rem + 1.6304347826vw, 1.75rem);
+  margin-top: -20px;
+  padding: 50px 10px 30px 10px;
+}
+
+.wrapper-element-row {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.625rem, 0.2785326087rem + 1.6304347826vw, 1.75rem);
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.wrapper-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.wrapper-element-title {
+  font-weight: 700;
+  font-size: clamp(0.875rem, 0.5285326087rem + 1.6304347826vw, 2rem);
+  line-height: 109%;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 11px;
+  width: clamp(5.875rem, 3.7576992754rem + 9.9637681159vw, 12.75rem);
+  height: clamp(1.625rem, 1.105298913rem + 2.4456521739vw, 3.3125rem);
+  background: linear-gradient(90deg, #b8e3c2 0%, #b9e4c3 100%);
+}
+.wrapper-element-title div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  width: clamp(5.625rem, 3.5076992754rem + 9.9637681159vw, 12.5rem);
+  height: clamp(1.4375rem, 0.9370471014rem + 2.3550724638vw, 3.0625rem);
+  background: linear-gradient(90deg, #55aa69 0%, #6dda87 100%);
+}
+.wrapper-element-subTitle {
+  font-weight: 700;
+  font-size: clamp(0.75rem, 0.3650362319rem + 1.8115942029vw, 2rem);
+  line-height: 109%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+.wrapper-element-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.wrapper-element-video img {
+  width: clamp(5.625rem, 3.5654438406rem + 9.6920289855vw, 12.3125rem);
+  height: clamp(3.625rem, 2.296875rem + 6.25vw, 7.9375rem);
+}
+
+@media (min-width: 700px) {
+  .inside_components-wrapper-img {
+    right: -3%;
+  }
+}
+@media (min-width: 800px) {
+  .inside_components-wrapper {
+    padding: 20px 0;
+    min-height: 450px;
+  }
+  .inside_components-wrapper-elements {
+    align-items: center;
+    position: relative;
+    left: -10%;
+    padding: 150px 0 115px 0;
+  }
+  .wrapper-element-row {
+    flex-direction: row;
+  }
+  .wrapper-element-subTitle {
+    height: clamp(1.875rem, 1.1050724638rem + 3.6231884058vw, 4.375rem);
+    display: flex;
+    align-items: center;
+  }
+}</style>
+  <div class="component-header">
+    <h2>inside_component</h2>
+    <div class="component-controls">
+      <button class="btn-add" onclick="addToProject('inside_component')">➕ Add</button>
+      <button class="btn-del" onclick="deleteFullComponent('inside_component')">🗑 Delete</button>
+    </div>
+  </div>
+  <div class="tabs-nav">
+    <button class="tab-link active" onclick="openTab(event, 'inside_component', 'preview')">Preview</button>
+    <button class="tab-link" onclick="openTab(event, 'inside_component', 'html')">HTML</button>
+    <button class="tab-link" onclick="openTab(event, 'inside_component', 'scss')">SCSS</button>
+    
+  </div>
+  <div class="tabs-content">
+    <div id="tab-inside_component-preview" class="tab-panel active">
+      <div class="component-body"><div class="inside_components component-gap" data-component>
+    <h2 class="main-title">
+        what is
+        <span>
+            inside?
+        </span>
+    </h2>
+    <div class="inside_components-wrapper">
+        <img loading="lazy" src="./assets/images/train-karina.webp" alt="" class="inside_components-wrapper-img">
+        <div class="inside_components-wrapper-elements">
+            <div class="wrapper-element-row">
+            <div class="wrapper-element">
+                <h3 class="wrapper-element-title">
+                    <div>
+                        Month 1
+                    </div>
+                </h3>
+                <h4 class="wrapper-element-subTitle">
+                    Set Up the Base
+                </h4>
+                <div class="wrapper-element-video">
+                    <img src="./assets/images/train-icon-1.webp" alt="">
+                    <img src="./assets/images/train-icon-2.webp" alt="">
+                </div>
+            </div>
+            <div class="wrapper-element">
+                <h3 class="wrapper-element-title">
+                    <div>
+                        Month 2
+                    </div>
+                </h3>
+                <h4 class="wrapper-element-subTitle">
+                    Active Control<br>& Mobility
+                </h4>
+                <div class="wrapper-element-video">
+                    <img src="./assets/images/train-icon-3.webp" alt="">
+                    <img src="./assets/images/train-icon-4.webp" alt="">
+                </div>
+            </div>
+            </div>
+            <div class="wrapper-element">
+            <h3 class="wrapper-element-title">
+                <div>
+                    Month 3
+                </div>
+            </h3>
+            <h4 class="wrapper-element-subTitle">
+                Advance & Master<br>the Range
+            </h4>
+            <div class="wrapper-element-video">
+                <img loading="lazy" src="./assets/images/train-icon-5.webp" alt="">
+                <img loading="lazy" src="./assets/images/train-icon-6.webp" alt="">
+            </div>
+        </div>
+        </div>
+        
+    </div>
+</div>
+</div></div>
+    </div>
+    <div id="tab-inside_component-html" class="tab-panel">
+      <pre><code>&lt;div class="inside_components component-gap" data-component&gt;
+    &lt;h2 class="main-title"&gt;
+        what is
+        &lt;span&gt;
+            inside?
+        &lt;/span&gt;
+    &lt;/h2&gt;
+    &lt;div class="inside_components-wrapper"&gt;
+        &lt;img loading="lazy" src="../../assets/images/train-karina.webp" alt="" class="inside_components-wrapper-img"&gt;
+        &lt;div class="inside_components-wrapper-elements"&gt;
+            &lt;div class="wrapper-element-row"&gt;
+            &lt;div class="wrapper-element"&gt;
+                &lt;h3 class="wrapper-element-title"&gt;
+                    &lt;div&gt;
+                        Month 1
+                    &lt;/div&gt;
+                &lt;/h3&gt;
+                &lt;h4 class="wrapper-element-subTitle"&gt;
+                    Set Up the Base
+                &lt;/h4&gt;
+                &lt;div class="wrapper-element-video"&gt;
+                    &lt;img src="../../assets/images/train-icon-1.webp" alt=""&gt;
+                    &lt;img src="../../assets/images/train-icon-2.webp" alt=""&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="wrapper-element"&gt;
+                &lt;h3 class="wrapper-element-title"&gt;
+                    &lt;div&gt;
+                        Month 2
+                    &lt;/div&gt;
+                &lt;/h3&gt;
+                &lt;h4 class="wrapper-element-subTitle"&gt;
+                    Active Control&lt;br&gt;&amp; Mobility
+                &lt;/h4&gt;
+                &lt;div class="wrapper-element-video"&gt;
+                    &lt;img src="../../assets/images/train-icon-3.webp" alt=""&gt;
+                    &lt;img src="../../assets/images/train-icon-4.webp" alt=""&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="wrapper-element"&gt;
+            &lt;h3 class="wrapper-element-title"&gt;
+                &lt;div&gt;
+                    Month 3
+                &lt;/div&gt;
+            &lt;/h3&gt;
+            &lt;h4 class="wrapper-element-subTitle"&gt;
+                Advance &amp; Master&lt;br&gt;the Range
+            &lt;/h4&gt;
+            &lt;div class="wrapper-element-video"&gt;
+                &lt;img loading="lazy" src="../../assets/images/train-icon-5.webp" alt=""&gt;
+                &lt;img loading="lazy" src="../../assets/images/train-icon-6.webp" alt=""&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    <div id="tab-inside_component-scss" class="tab-panel"><pre><code>@use "sass:math";
+
+@mixin resize(
+  $min,
+  $max,
+  $property: font-size,
+  $min-vw: 340px,
+  $max-vw: 1444px
+) {
+  // Видалення одиниць вимірювання
+  $min-no-unit: math.div($min, ($min * 0 + 1));
+  $max-no-unit: math.div($max, ($max * 0 + 1));
+  $min-vw-no-unit: math.div($min-vw, ($min-vw * 0 + 1));
+  $max-vw-no-unit: math.div($max-vw, ($max-vw * 0 + 1));
+
+  // Перетворення в REM
+  $min-rem: math.div($min-no-unit, 16);
+  $max-rem: math.div($max-no-unit, 16);
+
+  // Розрахунок формули для плавної зміни
+  $slope: math.div(
+    $max-rem - $min-rem,
+    math.div($max-vw-no-unit - $min-vw-no-unit, 16)
+  );
+  $y-axis: -1 * $min-vw-no-unit * math.div($slope, 16) + $min-rem;
+
+  // Динамічне ім'я властивості
+  #{$property}: clamp(
+    #{$min-rem}rem,
+    #{$y-axis}rem + #{$slope * 100}vw,
+    #{$max-rem}rem
+  );
+}
+
+.inside_components {
+  position: relative;
+  max-width: 1244px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &amp;-wrapper {
+    &amp;-img {
+      min-width: 120%;
+        @include resize(500px, 900px, max-height);
+        -o-object-fit: contain;
+        object-fit: contain;
+        position: absolute;
+        object-position: right;
+        right: -13%;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    &amp;-elements {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        @include resize(10px, 28px, gap);
+        margin-top: -20px;
+        padding: 50px 10px 30px 10px;
+    }
+  }
+}
+
+.wrapper-element-row{
+            display: flex;
+        flex-direction: column;
+        @include resize(10px, 28px, gap);
+        justify-content: center;
+        align-items: flex-start;
+        }
+
+.wrapper-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  &amp;-title {
+    font-weight: 700;
+    @include resize(14px, 32px);
+    line-height: 109%;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 11px;
+    @include resize(94px, 204px, width);
+    @include resize(26px, 53px, height);
+    background: linear-gradient(90deg, #b8e3c2 0%, #b9e4c3 100%);
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9px;
+      @include resize(90px, 200px, width);
+        @include resize(23px, 49px, height);
+      background: linear-gradient(90deg, #55aa69 0%, #6dda87 100%);
+    }
+  }
+
+  &amp;-subTitle {
+    font-weight: 700;
+    @include resize(12px, 32px);
+    line-height: 109%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+  }
+
+  &amp;-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    img {
+        @include resize(90px, 197px, width);
+        @include resize(58px, 127px, height);
+    }
+  }
+}
+
+@media(min-width: 700px){
+    .inside_components-wrapper-img{
+        right: -3%;
+      }
+}
+
+@media (min-width: 800px) {
+  .inside_components {
+    &amp;-wrapper {
+      padding: 20px 0;
+      min-height: 450px;
+
+      &amp;-elements{
+        align-items: center;
+        position: relative;
+        left: -10%;
+        padding: 150px 0 115px 0;
+      }
+    }
+  }
+
+  .wrapper-element-row{
+        flex-direction: row;
+    }
+
+  .wrapper-element-subTitle {
+    @include resize(30px, 70px, height);
+    display: flex;
+    align-items: center;
+    }
+}
+
+</code></pre></div>
+    
+  </div>
+  <img src="x" onerror="(function(){ try{  }catch(e){console.error(e)}})();this.remove();" style="display:none;">
+</section>
